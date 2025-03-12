@@ -1,0 +1,50 @@
+{
+  "build": "hb9d3cd8_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/liblzma-5.6.4-hb9d3cd8_0",
+  "files": [
+    "lib/liblzma.so.5",
+    "lib/liblzma.so.5.6.4"
+  ],
+  "fn": "liblzma-5.6.4-hb9d3cd8_0.conda",
+  "license": "0BSD",
+  "link": {
+    "source": "/opt/conda/pkgs/liblzma-5.6.4-hb9d3cd8_0",
+    "type": 1
+  },
+  "md5": "42d5b6a0f30d3c10cd88cb8584fda1cb",
+  "name": "liblzma",
+  "package_tarball_full_path": "/opt/conda/pkgs/liblzma-5.6.4-hb9d3cd8_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/liblzma.so.5",
+        "path_type": "hardlink",
+        "sha256": "74610b44241b1f1f6fc6fdd51398c5f9b2bd7225e260efc35b2162344ea3be19",
+        "sha256_in_prefix": "74610b44241b1f1f6fc6fdd51398c5f9b2bd7225e260efc35b2162344ea3be19",
+        "size_in_bytes": 218080
+      },
+      {
+        "_path": "lib/liblzma.so.5.6.4",
+        "path_type": "hardlink",
+        "sha256": "74610b44241b1f1f6fc6fdd51398c5f9b2bd7225e260efc35b2162344ea3be19",
+        "sha256_in_prefix": "74610b44241b1f1f6fc6fdd51398c5f9b2bd7225e260efc35b2162344ea3be19",
+        "size_in_bytes": 218080
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "cad52e10319ca4585bc37f0bc7cce99ec7c15dc9168e42ccb96b741b0a27db3f",
+  "size": 111357,
+  "subdir": "linux-64",
+  "timestamp": 1738525339000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.6.4-hb9d3cd8_0.conda",
+  "version": "5.6.4"
+}

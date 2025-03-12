@@ -1,0 +1,267 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "lxml >=4.9.3,<6.0.0",
+    "beautifulsoup4 >=4.12.3,<5.0.0"
+  ],
+  "depends": [
+    "langchain-core <1.0.0,>=0.3.34",
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/langchain-text-splitters-0.3.6-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/METADATA",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/RECORD",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/WHEEL",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/langchain_text_splitters-0.3.6.dist-info/entry_points.txt",
+    "lib/python3.11/site-packages/langchain_text_splitters/__init__.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/base.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/character.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/html.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/json.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/konlpy.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/latex.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/markdown.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/nltk.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/py.typed",
+    "lib/python3.11/site-packages/langchain_text_splitters/python.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/sentence_transformers.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/spacy.py",
+    "lib/python3.11/site-packages/langchain_text_splitters/xsl/converting_to_header.xslt",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/base.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/character.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/html.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/json.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/konlpy.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/latex.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/markdown.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/nltk.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/python.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/sentence_transformers.cpython-311.pyc",
+    "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/spacy.cpython-311.pyc"
+  ],
+  "fn": "langchain-text-splitters-0.3.6-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/opt/conda/pkgs/langchain-text-splitters-0.3.6-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "1d2fe5d42c2848e48a1b6362aab76077",
+  "name": "langchain-text-splitters",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/langchain-text-splitters-0.3.6-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6d6a97a97b9e6210d7cd4fd249f481aa4b927632cd250d685300f891a573ce9a",
+        "sha256_in_prefix": "6d6a97a97b9e6210d7cd4fd249f481aa4b927632cd250d685300f891a573ce9a",
+        "size_in_bytes": 1937
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c029b5b7fd39a994b0b0d3b154fcb6797f7a356c89846f1c6536535cc8a20885",
+        "sha256_in_prefix": "c029b5b7fd39a994b0b0d3b154fcb6797f7a356c89846f1c6536535cc8a20885",
+        "size_in_bytes": 2769
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "b6169a036c352737060b8f1662e7c0b3c9eb6198c99bc2ea35f9d714e172082e",
+        "sha256_in_prefix": "b6169a036c352737060b8f1662e7c0b3c9eb6198c99bc2ea35f9d714e172082e",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "fa7579f8fc8131c35392633ef5056f4ff1ce9e03af85cceeabb5059428fd6e5c",
+        "sha256_in_prefix": "fa7579f8fc8131c35392633ef5056f4ff1ce9e03af85cceeabb5059428fd6e5c",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters-0.3.6.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "sha256_in_prefix": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4e13fa99cb90381b71117f5b9aa560f73b6b00cb7b061efe97144a8dd15d62b9",
+        "sha256_in_prefix": "4e13fa99cb90381b71117f5b9aa560f73b6b00cb7b061efe97144a8dd15d62b9",
+        "size_in_bytes": 2233
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/base.py",
+        "path_type": "hardlink",
+        "sha256": "f567e093de2e90a7324e4e34dac37965cdbd929d6ad4e424528239773ffbd2c1",
+        "sha256_in_prefix": "f567e093de2e90a7324e4e34dac37965cdbd929d6ad4e424528239773ffbd2c1",
+        "size_in_bytes": 12155
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/character.py",
+        "path_type": "hardlink",
+        "sha256": "8ce661eb32d1c7cd412e6f8cbd3d91f27787d10d227ba95f9bd525cc4007967e",
+        "sha256_in_prefix": "8ce661eb32d1c7cd412e6f8cbd3d91f27787d10d227ba95f9bd525cc4007967e",
+        "size_in_bytes": 23723
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/html.py",
+        "path_type": "hardlink",
+        "sha256": "2171ea433782a58d53be812203a6adc0d720a5e6073f94f99bb1ad9bddd3eb1e",
+        "sha256_in_prefix": "2171ea433782a58d53be812203a6adc0d720a5e6073f94f99bb1ad9bddd3eb1e",
+        "size_in_bytes": 37922
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/json.py",
+        "path_type": "hardlink",
+        "sha256": "99702bb1252c1ff9023d952f513c4d1c9b32ea405395c6fee49c9b6bc2c0a3ec",
+        "sha256_in_prefix": "99702bb1252c1ff9023d952f513c4d1c9b32ea405395c6fee49c9b6bc2c0a3ec",
+        "size_in_bytes": 5895
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/konlpy.py",
+        "path_type": "hardlink",
+        "sha256": "e81036a06ca137d397d9da34033514cba6fcd24f6b4ebde047eebed38f8a3038",
+        "sha256_in_prefix": "e81036a06ca137d397d9da34033514cba6fcd24f6b4ebde047eebed38f8a3038",
+        "size_in_bytes": 985
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/latex.py",
+        "path_type": "hardlink",
+        "sha256": "ed645e514ed8a5b9a1cabeacef350f3361400a932e6c154ebd8c8b424b4842de",
+        "sha256_in_prefix": "ed645e514ed8a5b9a1cabeacef350f3361400a932e6c154ebd8c8b424b4842de",
+        "size_in_bytes": 546
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/markdown.py",
+        "path_type": "hardlink",
+        "sha256": "a38c3fab50d1ceff040bfd8a7b2e7545e58ab9912ed369e3400ea797c1d17cd5",
+        "sha256_in_prefix": "a38c3fab50d1ceff040bfd8a7b2e7545e58ab9912ed369e3400ea797c1d17cd5",
+        "size_in_bytes": 17126
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/nltk.py",
+        "path_type": "hardlink",
+        "sha256": "8aa98b78185cff2e20234e2440a71c4ef9cb136e01ff11c0b6cd9245aba5ac05",
+        "sha256_in_prefix": "8aa98b78185cff2e20234e2440a71c4ef9cb136e01ff11c0b6cd9245aba5ac05",
+        "size_in_bytes": 1966
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/python.py",
+        "path_type": "hardlink",
+        "sha256": "274d8200acedc8437af40e7060d8512f6870f3f496052837dfe324b230e64c79",
+        "sha256_in_prefix": "274d8200acedc8437af40e7060d8512f6870f3f496052837dfe324b230e64c79",
+        "size_in_bytes": 539
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/sentence_transformers.py",
+        "path_type": "hardlink",
+        "sha256": "08a866d1ce9091922859a54ecf1b112a6d5cecc2323bed65caaa615757209f15",
+        "sha256_in_prefix": "08a866d1ce9091922859a54ecf1b112a6d5cecc2323bed65caaa615757209f15",
+        "size_in_bytes": 3787
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/spacy.py",
+        "path_type": "hardlink",
+        "sha256": "897eb495d8374e6ceda6201c77cf28851ff1512c87411714da714483c17ed5de",
+        "sha256_in_prefix": "897eb495d8374e6ceda6201c77cf28851ff1512c87411714da714483c17ed5de",
+        "size_in_bytes": 1941
+      },
+      {
+        "_path": "site-packages/langchain_text_splitters/xsl/converting_to_header.xslt",
+        "path_type": "hardlink",
+        "sha256": "59eb0daa2e1fa3677d08fbf76d9751b13a0b258135d8cacc645bf67b036f59f5",
+        "sha256_in_prefix": "59eb0daa2e1fa3677d08fbf76d9751b13a0b258135d8cacc645bf67b036f59f5",
+        "size_in_bytes": 1073
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/base.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/character.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/html.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/json.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/konlpy.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/latex.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/markdown.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/nltk.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/python.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/sentence_transformers.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/langchain_text_splitters/__pycache__/spacy.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "c24c9526957ccda2e96e2a12ecf5903aeff19516c9010c11cbcc3f3ab6c75196",
+  "size": 31541,
+  "subdir": "noarch",
+  "timestamp": 1738956785000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/langchain-text-splitters-0.3.6-pyhd8ed1ab_0.conda",
+  "version": "0.3.6"
+}

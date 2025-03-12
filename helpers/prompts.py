@@ -71,3 +71,4 @@ def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
         print("\n\nERROR ### Here is the buggy response: ", response, "\n\n")
         result = None
     return result
+

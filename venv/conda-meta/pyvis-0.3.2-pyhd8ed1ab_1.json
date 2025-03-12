@@ -1,0 +1,387 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "ipython >=5.3.0",
+    "jinja2 >=2.9.6",
+    "jsonpickle >=1.4.1",
+    "networkx >=1.11",
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/pyvis-0.3.2-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/LICENSE_BSD.txt",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/pyvis-0.2.0.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/pyvis/__init__.py",
+    "lib/python3.11/site-packages/pyvis/_version.py",
+    "lib/python3.11/site-packages/pyvis/edge.py",
+    "lib/python3.11/site-packages/pyvis/lib/bindings/utils.js",
+    "lib/python3.11/site-packages/pyvis/lib/tom-select/tom-select.complete.min.js",
+    "lib/python3.11/site-packages/pyvis/lib/tom-select/tom-select.css",
+    "lib/python3.11/site-packages/pyvis/lib/vis-9.0.4/vis-network.css",
+    "lib/python3.11/site-packages/pyvis/lib/vis-9.0.4/vis-network.min.js",
+    "lib/python3.11/site-packages/pyvis/lib/vis-9.1.2/vis-network.css",
+    "lib/python3.11/site-packages/pyvis/lib/vis-9.1.2/vis-network.min.js",
+    "lib/python3.11/site-packages/pyvis/network.py",
+    "lib/python3.11/site-packages/pyvis/node.py",
+    "lib/python3.11/site-packages/pyvis/options.py",
+    "lib/python3.11/site-packages/pyvis/physics.py",
+    "lib/python3.11/site-packages/pyvis/templates/animation_template.html",
+    "lib/python3.11/site-packages/pyvis/templates/lib/bindings/utils.js",
+    "lib/python3.11/site-packages/pyvis/templates/lib/tom-select/tom-select.complete.min.js",
+    "lib/python3.11/site-packages/pyvis/templates/lib/tom-select/tom-select.css",
+    "lib/python3.11/site-packages/pyvis/templates/lib/vis-9.0.4/vis-network.css",
+    "lib/python3.11/site-packages/pyvis/templates/lib/vis-9.0.4/vis-network.min.js",
+    "lib/python3.11/site-packages/pyvis/templates/lib/vis-9.1.2/vis-network.css",
+    "lib/python3.11/site-packages/pyvis/templates/lib/vis-9.1.2/vis-network.min.js",
+    "lib/python3.11/site-packages/pyvis/templates/template.html",
+    "lib/python3.11/site-packages/pyvis/tests/__init__.py",
+    "lib/python3.11/site-packages/pyvis/tests/test_graph.py",
+    "lib/python3.11/site-packages/pyvis/tests/test_html.py",
+    "lib/python3.11/site-packages/pyvis/tests/test_me.py",
+    "lib/python3.11/site-packages/pyvis/utils.py",
+    "lib/python3.11/site-packages/pyvis/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/_version.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/edge.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/network.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/node.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/options.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/physics.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/tests/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_graph.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_html.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_me.cpython-311.pyc",
+    "lib/python3.11/site-packages/pyvis/__pycache__/utils.cpython-311.pyc"
+  ],
+  "fn": "pyvis-0.3.2-pyhd8ed1ab_1.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/conda/pkgs/pyvis-0.3.2-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "eb86dfeb9c60ec66c7a7fa93ae5dc58a",
+  "name": "pyvis",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/pyvis-0.3.2-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/LICENSE_BSD.txt",
+        "path_type": "hardlink",
+        "sha256": "295e9ef50d142d9576117156755c6c82a78c16848cdf187efd4d924dcf7153e3",
+        "sha256_in_prefix": "295e9ef50d142d9576117156755c6c82a78c16848cdf187efd4d924dcf7153e3",
+        "size_in_bytes": 1533
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "aa9d12d72f657060f1e3a20cce76bd32dec6757a2c44333f412eff020d11b90a",
+        "sha256_in_prefix": "aa9d12d72f657060f1e3a20cce76bd32dec6757a2c44333f412eff020d11b90a",
+        "size_in_bytes": 1891
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "8e4e73eb89c678000d305685fd007736311b729349b48c72ebc1aa5ce26aebb0",
+        "sha256_in_prefix": "8e4e73eb89c678000d305685fd007736311b729349b48c72ebc1aa5ce26aebb0",
+        "size_in_bytes": 3705
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "227f454cdc5e3fad0a9d3906c3bc24ea624f61dfdd4128c46665dd05d30223ef",
+        "sha256_in_prefix": "227f454cdc5e3fad0a9d3906c3bc24ea624f61dfdd4128c46665dd05d30223ef",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "45250fe56a1b166f2b8ac53c726775ee06f99da1083acc1e8a1e49c7a43722b4",
+        "sha256_in_prefix": "45250fe56a1b166f2b8ac53c726775ee06f99da1083acc1e8a1e49c7a43722b4",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "site-packages/pyvis-0.2.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "a0b36dd9c7e3f601aa8f10ec480e00b1dde002ec28f3807ede3134d78ed7a518",
+        "sha256_in_prefix": "a0b36dd9c7e3f601aa8f10ec480e00b1dde002ec28f3807ede3134d78ed7a518",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/pyvis/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "594ea455a73760ddaba04dbfbe9a59310b402910dd34e0acef413b282b0585a3",
+        "sha256_in_prefix": "594ea455a73760ddaba04dbfbe9a59310b402910dd34e0acef413b282b0585a3",
+        "size_in_bytes": 56
+      },
+      {
+        "_path": "site-packages/pyvis/_version.py",
+        "path_type": "hardlink",
+        "sha256": "dcf6f2342e17747bf495097c87c8570efc424236c73da811cc39a5595ab7ede7",
+        "sha256_in_prefix": "dcf6f2342e17747bf495097c87c8570efc424236c73da811cc39a5595ab7ede7",
+        "size_in_bytes": 37
+      },
+      {
+        "_path": "site-packages/pyvis/edge.py",
+        "path_type": "hardlink",
+        "sha256": "434f83c6abcbfae670cee0978babd54d6f068dd527ea297dfbd339e85223598d",
+        "sha256_in_prefix": "434f83c6abcbfae670cee0978babd54d6f068dd527ea297dfbd339e85223598d",
+        "size_in_bytes": 292
+      },
+      {
+        "_path": "site-packages/pyvis/lib/bindings/utils.js",
+        "path_type": "hardlink",
+        "sha256": "3113c73317c30c99eaafbc782916160ce7d23183a148615da0496643e9560cb0",
+        "sha256_in_prefix": "3113c73317c30c99eaafbc782916160ce7d23183a148615da0496643e9560cb0",
+        "size_in_bytes": 6311
+      },
+      {
+        "_path": "site-packages/pyvis/lib/tom-select/tom-select.complete.min.js",
+        "path_type": "hardlink",
+        "sha256": "7f67501325a15e9ecce68dccb26812eb327f1aae295c5c52c524ec62b3f13dcd",
+        "sha256_in_prefix": "7f67501325a15e9ecce68dccb26812eb327f1aae295c5c52c524ec62b3f13dcd",
+        "size_in_bytes": 44776
+      },
+      {
+        "_path": "site-packages/pyvis/lib/tom-select/tom-select.css",
+        "path_type": "hardlink",
+        "sha256": "260a9419fb65dbd685f5f109f8e6de3d8b979a154050af93a761a22d34ede784",
+        "sha256_in_prefix": "260a9419fb65dbd685f5f109f8e6de3d8b979a154050af93a761a22d34ede784",
+        "size_in_bytes": 9328
+      },
+      {
+        "_path": "site-packages/pyvis/lib/vis-9.0.4/vis-network.css",
+        "path_type": "hardlink",
+        "sha256": "d5d853106a3e92724ad6823dc01cfd3949a19afaa3a781f182b6e069bdba55cb",
+        "sha256_in_prefix": "d5d853106a3e92724ad6823dc01cfd3949a19afaa3a781f182b6e069bdba55cb",
+        "size_in_bytes": 225666
+      },
+      {
+        "_path": "site-packages/pyvis/lib/vis-9.0.4/vis-network.min.js",
+        "path_type": "hardlink",
+        "sha256": "03b6895e7424bb95042c41cc0e1794ea6b9d1bbfc227d847d413cd1ce47782e7",
+        "sha256_in_prefix": "03b6895e7424bb95042c41cc0e1794ea6b9d1bbfc227d847d413cd1ce47782e7",
+        "size_in_bytes": 895821
+      },
+      {
+        "_path": "site-packages/pyvis/lib/vis-9.1.2/vis-network.css",
+        "path_type": "hardlink",
+        "sha256": "2e82d445ad5878ea881652470ce632601f8f55f1b99e6ebecdff8614600e6d0e",
+        "sha256_in_prefix": "2e82d445ad5878ea881652470ce632601f8f55f1b99e6ebecdff8614600e6d0e",
+        "size_in_bytes": 220163
+      },
+      {
+        "_path": "site-packages/pyvis/lib/vis-9.1.2/vis-network.min.js",
+        "path_type": "hardlink",
+        "sha256": "1f20f0736f32cb9bedf8f6383b25cfea2f839e1abe80d6e8040b4d5bea378c69",
+        "sha256_in_prefix": "1f20f0736f32cb9bedf8f6383b25cfea2f839e1abe80d6e8040b4d5bea378c69",
+        "size_in_bytes": 468813
+      },
+      {
+        "_path": "site-packages/pyvis/network.py",
+        "path_type": "hardlink",
+        "sha256": "7a51d6b8488cd45b7d6f22229ec861cb72d7d3934681946f4c0c3970701693e4",
+        "sha256_in_prefix": "7a51d6b8488cd45b7d6f22229ec861cb72d7d3934681946f4c0c3970701693e4",
+        "size_in_bytes": 39633
+      },
+      {
+        "_path": "site-packages/pyvis/node.py",
+        "path_type": "hardlink",
+        "sha256": "4e206eee8d894d3b30eae8c2880f1e60536b7a5ce3b41adb54bda3bd9c8caa6b",
+        "sha256_in_prefix": "4e206eee8d894d3b30eae8c2880f1e60536b7a5ce3b41adb54bda3bd9c8caa6b",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "site-packages/pyvis/options.py",
+        "path_type": "hardlink",
+        "sha256": "c31091aa97a5b2380a5bccb966e15fd9e064ad2f49f0f65ca8c92f9288ae0ba5",
+        "sha256_in_prefix": "c31091aa97a5b2380a5bccb966e15fd9e064ad2f49f0f65ca8c92f9288ae0ba5",
+        "size_in_bytes": 7782
+      },
+      {
+        "_path": "site-packages/pyvis/physics.py",
+        "path_type": "hardlink",
+        "sha256": "de12c602d95babe65696534b7ee67231175fe6321f63b51967fd051489f8b787",
+        "sha256_in_prefix": "de12c602d95babe65696534b7ee67231175fe6321f63b51967fd051489f8b787",
+        "size_in_bytes": 4086
+      },
+      {
+        "_path": "site-packages/pyvis/templates/animation_template.html",
+        "path_type": "hardlink",
+        "sha256": "e5478ddb57e4586b8425b2b9a4d0d97694f02f638a3a8c7309baca18ef88b53b",
+        "sha256_in_prefix": "e5478ddb57e4586b8425b2b9a4d0d97694f02f638a3a8c7309baca18ef88b53b",
+        "size_in_bytes": 3188
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/bindings/utils.js",
+        "path_type": "hardlink",
+        "sha256": "3113c73317c30c99eaafbc782916160ce7d23183a148615da0496643e9560cb0",
+        "sha256_in_prefix": "3113c73317c30c99eaafbc782916160ce7d23183a148615da0496643e9560cb0",
+        "size_in_bytes": 6311
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/tom-select/tom-select.complete.min.js",
+        "path_type": "hardlink",
+        "sha256": "7f67501325a15e9ecce68dccb26812eb327f1aae295c5c52c524ec62b3f13dcd",
+        "sha256_in_prefix": "7f67501325a15e9ecce68dccb26812eb327f1aae295c5c52c524ec62b3f13dcd",
+        "size_in_bytes": 44776
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/tom-select/tom-select.css",
+        "path_type": "hardlink",
+        "sha256": "260a9419fb65dbd685f5f109f8e6de3d8b979a154050af93a761a22d34ede784",
+        "sha256_in_prefix": "260a9419fb65dbd685f5f109f8e6de3d8b979a154050af93a761a22d34ede784",
+        "size_in_bytes": 9328
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/vis-9.0.4/vis-network.css",
+        "path_type": "hardlink",
+        "sha256": "d5d853106a3e92724ad6823dc01cfd3949a19afaa3a781f182b6e069bdba55cb",
+        "sha256_in_prefix": "d5d853106a3e92724ad6823dc01cfd3949a19afaa3a781f182b6e069bdba55cb",
+        "size_in_bytes": 225666
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/vis-9.0.4/vis-network.min.js",
+        "path_type": "hardlink",
+        "sha256": "03b6895e7424bb95042c41cc0e1794ea6b9d1bbfc227d847d413cd1ce47782e7",
+        "sha256_in_prefix": "03b6895e7424bb95042c41cc0e1794ea6b9d1bbfc227d847d413cd1ce47782e7",
+        "size_in_bytes": 895821
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/vis-9.1.2/vis-network.css",
+        "path_type": "hardlink",
+        "sha256": "2e82d445ad5878ea881652470ce632601f8f55f1b99e6ebecdff8614600e6d0e",
+        "sha256_in_prefix": "2e82d445ad5878ea881652470ce632601f8f55f1b99e6ebecdff8614600e6d0e",
+        "size_in_bytes": 220163
+      },
+      {
+        "_path": "site-packages/pyvis/templates/lib/vis-9.1.2/vis-network.min.js",
+        "path_type": "hardlink",
+        "sha256": "1f20f0736f32cb9bedf8f6383b25cfea2f839e1abe80d6e8040b4d5bea378c69",
+        "sha256_in_prefix": "1f20f0736f32cb9bedf8f6383b25cfea2f839e1abe80d6e8040b4d5bea378c69",
+        "size_in_bytes": 468813
+      },
+      {
+        "_path": "site-packages/pyvis/templates/template.html",
+        "path_type": "hardlink",
+        "sha256": "cc42e96b51f546f0057f680b1ddc77a0d09ee33a89144b188c16af5bb16bc348",
+        "sha256_in_prefix": "cc42e96b51f546f0057f680b1ddc77a0d09ee33a89144b188c16af5bb16bc348",
+        "size_in_bytes": 25032
+      },
+      {
+        "_path": "site-packages/pyvis/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pyvis/tests/test_graph.py",
+        "path_type": "hardlink",
+        "sha256": "540dea43958c3a40b2e28c8cf4b9de137134e15db39e96a06dac842c7b0d6567",
+        "sha256_in_prefix": "540dea43958c3a40b2e28c8cf4b9de137134e15db39e96a06dac842c7b0d6567",
+        "size_in_bytes": 11835
+      },
+      {
+        "_path": "site-packages/pyvis/tests/test_html.py",
+        "path_type": "hardlink",
+        "sha256": "24917a961c3ebe3e2bbcbef83b05406e6396b0644976425447cda2e9d47a07dc",
+        "sha256_in_prefix": "24917a961c3ebe3e2bbcbef83b05406e6396b0644976425447cda2e9d47a07dc",
+        "size_in_bytes": 8816
+      },
+      {
+        "_path": "site-packages/pyvis/tests/test_me.py",
+        "path_type": "hardlink",
+        "sha256": "3529f5c8caf688614dc0ab1103390a8e850c388fe794d5296b3994b9a9c24e4e",
+        "sha256_in_prefix": "3529f5c8caf688614dc0ab1103390a8e850c388fe794d5296b3994b9a9c24e4e",
+        "size_in_bytes": 1744
+      },
+      {
+        "_path": "site-packages/pyvis/utils.py",
+        "path_type": "hardlink",
+        "sha256": "07e3e9106a7f5f8d4f985af2d3e2a439f75c36e26726166291b23944ae120943",
+        "sha256_in_prefix": "07e3e9106a7f5f8d4f985af2d3e2a439f75c36e26726166291b23944ae120943",
+        "size_in_bytes": 380
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/_version.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/edge.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/network.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/node.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/options.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/physics.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/tests/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_graph.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_html.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/tests/__pycache__/test_me.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/pyvis/__pycache__/utils.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyvis[version='>=0.3.1']",
+  "sha256": "3bfa28fbbca73a8db914341ae58c0049757182c9d9c925c378719996b9a26bf1",
+  "size": 300893,
+  "subdir": "noarch",
+  "timestamp": 1737567297000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pyvis-0.3.2-pyhd8ed1ab_1.conda",
+  "version": "0.3.2"
+}

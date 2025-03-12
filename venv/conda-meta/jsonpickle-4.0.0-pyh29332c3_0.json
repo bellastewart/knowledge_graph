@@ -1,0 +1,294 @@
+{
+  "build": "pyh29332c3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.8"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/jsonpickle-4.0.0-pyh29332c3_0",
+  "files": [
+    "lib/python3.11/site-packages/jsonpickle/__init__.py",
+    "lib/python3.11/site-packages/jsonpickle/backend.py",
+    "lib/python3.11/site-packages/jsonpickle/compat.py",
+    "lib/python3.11/site-packages/jsonpickle/errors.py",
+    "lib/python3.11/site-packages/jsonpickle/ext/__init__.py",
+    "lib/python3.11/site-packages/jsonpickle/ext/gmpy.py",
+    "lib/python3.11/site-packages/jsonpickle/ext/numpy.py",
+    "lib/python3.11/site-packages/jsonpickle/ext/pandas.py",
+    "lib/python3.11/site-packages/jsonpickle/handlers.py",
+    "lib/python3.11/site-packages/jsonpickle/pickler.py",
+    "lib/python3.11/site-packages/jsonpickle/tags.py",
+    "lib/python3.11/site-packages/jsonpickle/tags_pd.py",
+    "lib/python3.11/site-packages/jsonpickle/unpickler.py",
+    "lib/python3.11/site-packages/jsonpickle/util.py",
+    "lib/python3.11/site-packages/jsonpickle/version.py",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/INSTALLER",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/LICENSE",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/METADATA",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/RECORD",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/REQUESTED",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/WHEEL",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/direct_url.json",
+    "lib/python3.11/site-packages/jsonpickle-4.0.0.dist-info/top_level.txt",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/backend.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/compat.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/errors.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/__init__.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/gmpy.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/numpy.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/pandas.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/handlers.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/pickler.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/tags.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/tags_pd.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/unpickler.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/util.cpython-311.pyc",
+    "lib/python3.11/site-packages/jsonpickle/__pycache__/version.cpython-311.pyc"
+  ],
+  "fn": "jsonpickle-4.0.0-pyh29332c3_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/conda/pkgs/jsonpickle-4.0.0-pyh29332c3_0",
+    "type": 1
+  },
+  "md5": "326318b423a787eec6cb842fac0158c0",
+  "name": "jsonpickle",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/conda/pkgs/jsonpickle-4.0.0-pyh29332c3_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/jsonpickle/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2df9fb71e35e002bef911412e3c17fef8d3f8395f2eda4df7ee0ef3b227bcfe3",
+        "sha256_in_prefix": "2df9fb71e35e002bef911412e3c17fef8d3f8395f2eda4df7ee0ef3b227bcfe3",
+        "size_in_bytes": 3043
+      },
+      {
+        "_path": "site-packages/jsonpickle/backend.py",
+        "path_type": "hardlink",
+        "sha256": "c5b00168c5c56517034a0eb973978cd1d4e64201285757c438c77accf3fdcaac",
+        "sha256_in_prefix": "c5b00168c5c56517034a0eb973978cd1d4e64201285757c438c77accf3fdcaac",
+        "size_in_bytes": 9962
+      },
+      {
+        "_path": "site-packages/jsonpickle/compat.py",
+        "path_type": "hardlink",
+        "sha256": "8831a055b7fac85bd6185206a0eb8db02ed0bb06f2761148a103e250c69ee14c",
+        "sha256_in_prefix": "8831a055b7fac85bd6185206a0eb8db02ed0bb06f2761148a103e250c69ee14c",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "site-packages/jsonpickle/errors.py",
+        "path_type": "hardlink",
+        "sha256": "97369d1852ed12b4cf1f40b3030c52da06ddeb596aa0e244e1fdbf4d20dadd65",
+        "sha256_in_prefix": "97369d1852ed12b4cf1f40b3030c52da06ddeb596aa0e244e1fdbf4d20dadd65",
+        "size_in_bytes": 132
+      },
+      {
+        "_path": "site-packages/jsonpickle/ext/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/jsonpickle/ext/gmpy.py",
+        "path_type": "hardlink",
+        "sha256": "052a583726b061578674d42830d41c4baec7f94871a125403985e4c0f1f66057",
+        "sha256_in_prefix": "052a583726b061578674d42830d41c4baec7f94871a125403985e4c0f1f66057",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "site-packages/jsonpickle/ext/numpy.py",
+        "path_type": "hardlink",
+        "sha256": "25aa4233c9615974d85fba2278507243804414c58d9e1b28a36676e08e0c8176",
+        "sha256_in_prefix": "25aa4233c9615974d85fba2278507243804414c58d9e1b28a36676e08e0c8176",
+        "size_in_bytes": 13924
+      },
+      {
+        "_path": "site-packages/jsonpickle/ext/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "44b5b468cd204ed793a6bcfcf0b77aad5147be6ebb8d276d62322e743ed77bc1",
+        "sha256_in_prefix": "44b5b468cd204ed793a6bcfcf0b77aad5147be6ebb8d276d62322e743ed77bc1",
+        "size_in_bytes": 14176
+      },
+      {
+        "_path": "site-packages/jsonpickle/handlers.py",
+        "path_type": "hardlink",
+        "sha256": "f2cbc33271ecab4db384f82713c9d2449e6326e3f500021f9eb5986e8e61b16d",
+        "sha256_in_prefix": "f2cbc33271ecab4db384f82713c9d2449e6326e3f500021f9eb5986e8e61b16d",
+        "size_in_bytes": 8292
+      },
+      {
+        "_path": "site-packages/jsonpickle/pickler.py",
+        "path_type": "hardlink",
+        "sha256": "113dc81fff527bfa3959f077636b1aeabe066cc21e217b6927d933a200a1721b",
+        "sha256_in_prefix": "113dc81fff527bfa3959f077636b1aeabe066cc21e217b6927d933a200a1721b",
+        "size_in_bytes": 32282
+      },
+      {
+        "_path": "site-packages/jsonpickle/tags.py",
+        "path_type": "hardlink",
+        "sha256": "f9ce374bb18eb0f546e80051fef8ad5858c01075420fd83ea0d172d3dd059516",
+        "sha256_in_prefix": "f9ce374bb18eb0f546e80051fef8ad5858c01075420fd83ea0d172d3dd059516",
+        "size_in_bytes": 987
+      },
+      {
+        "_path": "site-packages/jsonpickle/tags_pd.py",
+        "path_type": "hardlink",
+        "sha256": "17ac053947d28e9df87bdd7013ca76e7edfb3e7e211fbcfb74e0bd0c46004212",
+        "sha256_in_prefix": "17ac053947d28e9df87bdd7013ca76e7edfb3e7e211fbcfb74e0bd0c46004212",
+        "size_in_bytes": 8312
+      },
+      {
+        "_path": "site-packages/jsonpickle/unpickler.py",
+        "path_type": "hardlink",
+        "sha256": "c542cd83e41fe5e4c1f9a239c0aa9faa7708a0ebd007b1a73a4a193856bfda18",
+        "sha256_in_prefix": "c542cd83e41fe5e4c1f9a239c0aa9faa7708a0ebd007b1a73a4a193856bfda18",
+        "size_in_bytes": 32264
+      },
+      {
+        "_path": "site-packages/jsonpickle/util.py",
+        "path_type": "hardlink",
+        "sha256": "976831b600c9fda2fc548f2705d1cdbc976c07aea3313752de6f015363b69479",
+        "sha256_in_prefix": "976831b600c9fda2fc548f2705d1cdbc976c07aea3313752de6f015363b69479",
+        "size_in_bytes": 14806
+      },
+      {
+        "_path": "site-packages/jsonpickle/version.py",
+        "path_type": "hardlink",
+        "sha256": "84fc0988523473fcdecb5f552a7e75de9f6027ae6ce6631d622d69d04a30ac53",
+        "sha256_in_prefix": "84fc0988523473fcdecb5f552a7e75de9f6027ae6ce6631d622d69d04a30ac53",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "da4d740e7bfe1e9777baeda3cf6534f568ecb2abb27b80e7e2c2f9f2864d839d",
+        "sha256_in_prefix": "da4d740e7bfe1e9777baeda3cf6534f568ecb2abb27b80e7e2c2f9f2864d839d",
+        "size_in_bytes": 1547
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d22d8192be6e0ccd2dafcb0065fdd03d48d8d716123be5db2bb71c80ac5ca5e1",
+        "sha256_in_prefix": "d22d8192be6e0ccd2dafcb0065fdd03d48d8d716123be5db2bb71c80ac5ca5e1",
+        "size_in_bytes": 8141
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3cf7385aa09fc24e8e7af62a7f620f486196df8196984a74f5d7b467c125a3c6",
+        "sha256_in_prefix": "3cf7385aa09fc24e8e7af62a7f620f486196df8196984a74f5d7b467c125a3c6",
+        "size_in_bytes": 2618
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3fd8f0fa01237bc07207bfe15e82029c7b550ab13031087eeb7d2d2af4167a17",
+        "sha256_in_prefix": "3fd8f0fa01237bc07207bfe15e82029c7b550ab13031087eeb7d2d2af4167a17",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "0321afb95af39ae3a56831f9b79cb47f141b6cf88731f16b011f6a31d4761405",
+        "sha256_in_prefix": "0321afb95af39ae3a56831f9b79cb47f141b6cf88731f16b011f6a31d4761405",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "site-packages/jsonpickle-4.0.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "71d4436252dce17393d8acf33eeae278c9fe5d6ff7631173a29c1d783a8f155b",
+        "sha256_in_prefix": "71d4436252dce17393d8acf33eeae278c9fe5d6ff7631173a29c1d783a8f155b",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/backend.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/compat.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/errors.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/__init__.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/gmpy.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/numpy.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/ext/__pycache__/pandas.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/handlers.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/pickler.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/tags.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/tags_pd.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/unpickler.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/util.cpython-311.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.11/site-packages/jsonpickle/__pycache__/version.cpython-311.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f0b69d1c43ae01c7494020bd800b4791909690b2b12b92c1d9760f2c9af1d5c8",
+  "size": 45207,
+  "subdir": "noarch",
+  "timestamp": 1731426283000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/jsonpickle-4.0.0-pyh29332c3_0.conda",
+  "version": "4.0.0"
+}
