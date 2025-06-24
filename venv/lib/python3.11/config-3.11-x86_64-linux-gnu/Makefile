@@ -29,10 +29,10 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
 VERSION=	3.11
-srcdir=		/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work
-VPATH=		/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work
-abs_srcdir=	/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work
-abs_builddir=	/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work/build-static
+srcdir=		/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work
+VPATH=		/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work
+abs_srcdir=	/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work
+abs_builddir=	/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work/build-static
 
 
 CC=		x86_64-conda-linux-gnu-gcc -pthread
@@ -82,7 +82,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -fwrapv -O2 -Wall
 BASECFLAGS=	
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix    
+CONFIGURE_CFLAGS=	-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix    
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -357,7 +357,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/workspaces/knowledge_graph/venv' '--build=x86_64-conda-linux-gnu' '--host=x86_64-conda-linux-gnu' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/workspaces/knowledge_graph/venv/share/zoneinfo' '--with-computed-gotos' '--with-system-ffi' '--with-system-expat' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/workspaces/knowledge_graph/venv/include' '--with-tcltk-libs=-L/workspaces/knowledge_graph/venv/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto' '--enable-optimizations' '-oldincludedir=/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'PKG_CONFIG_PATH=/workspaces/knowledge_graph/venv/lib/pkgconfig' 'MACHDEP=linux' 'CC=x86_64-conda-linux-gnu-gcc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix    ' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/workspaces/knowledge_graph/venv/lib -Wl,-rpath-link,/workspaces/knowledge_graph/venv/lib -L/workspaces/knowledge_graph/venv/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /workspaces/knowledge_graph/venv/include -I/workspaces/knowledge_graph/venv/include' 'CPP=/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/_build_env/bin/x86_64-conda-linux-gnu-cpp'
+CONFIG_ARGS=	 '--prefix=/workspaces/knowledge_graph/venv' '--build=x86_64-conda-linux-gnu' '--host=x86_64-conda-linux-gnu' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/workspaces/knowledge_graph/venv/share/zoneinfo' '--with-computed-gotos' '--with-system-ffi' '--with-system-expat' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/workspaces/knowledge_graph/venv/include' '--with-tcltk-libs=-L/workspaces/knowledge_graph/venv/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto' '--enable-optimizations' '-oldincludedir=/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/_build_env/x86_64-conda-linux-gnu/sysroot/usr/include' '--disable-shared' 'PROFILE_TASK=-m test --pgo' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'PKG_CONFIG_PATH=/workspaces/knowledge_graph/venv/lib/pkgconfig' 'MACHDEP=linux' 'CC=x86_64-conda-linux-gnu-gcc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix    ' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/workspaces/knowledge_graph/venv/lib -Wl,-rpath-link,/workspaces/knowledge_graph/venv/lib -L/workspaces/knowledge_graph/venv/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /workspaces/knowledge_graph/venv/include -I/workspaces/knowledge_graph/venv/include' 'CPP=/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/_build_env/bin/x86_64-conda-linux-gnu-cpp'
 
 
 # Subdirectories with code

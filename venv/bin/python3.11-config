@@ -35,7 +35,7 @@ exec_prefix="${prefix}"
 exec_prefix_real=${prefix_real}
 includedir=$(echo "${prefix}/include" | sed "s#$prefix#$prefix_real#")
 libdir=$(echo "${exec_prefix}/lib" | sed "s#$prefix#$prefix_real#")
-CFLAGS=$(echo "-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O3 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1733407214354/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix -fuse-linker-plugin -ffat-lto-objects -flto-partition=none -flto" | sed "s#$prefix#$prefix_real#")
+CFLAGS=$(echo "-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O3 -ffunction-sections -pipe -isystem /workspaces/knowledge_graph/venv/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/python-split_1741033395994/work=/usr/local/src/conda/python-3.11.11 -fdebug-prefix-map=/workspaces/knowledge_graph/venv=/usr/local/src/conda-prefix -fuse-linker-plugin -ffat-lto-objects -flto-partition=none -flto" | sed "s#$prefix#$prefix_real#")
 VERSION="3.11"
 LIBM="-lm"
 LIBC=""

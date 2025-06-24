@@ -1,0 +1,10 @@
+The interaction between Munc18-2 and syntaxin 3 plays a pivotal role in orchestrating the assembly of apical SNARE complexes in epithelial cells, a process essential for maintaining cellular polarity and directional vesicle trafficking. Munc18-2, a member of the Sec1/Munc18 (SM) family of proteins, acts as a molecular chaperone and regulator for syntaxin 3, an apical t-SNARE critical for vesicle fusion at the apical plasma membrane. In polarized epithelial cells, the correct targeting and fusion of vesicles carrying cargo to the apical surface is mediated by a tightly regulated SNARE complex that typically includes syntaxin 3, SNAP-23, and VAMPs (v-SNAREs). Munc18-2 binds directly to syntaxin 3 in a closed conformation, initially inhibiting premature SNARE complex formation, thereby ensuring temporal and spatial control over vesicle fusion. However, upon receiving appropriate regulatory signals—potentially involving Rab GTPases or other polarity cues—Munc18-2 facilitates the transition of syntaxin 3 to an open, fusogenic state, promoting the assembly of the ternary SNARE complex. Disruption of this interaction can lead to defects in apical membrane delivery and cell polarity, underscoring its physiological importance. Moreover, mutations in Munc18-2 (e.g., associated with familial hemophagocytic lymphohistiocytosis type 5) have been shown to compromise epithelial trafficking, further highlighting this interaction’s relevance to human disease. Overall, the Munc18-2–syntaxin 3 axis serves as a critical checkpoint in the regulation of apical membrane dynamics and epithelial cell homeostasis.
+
+
+
+
+
+
+
+
+

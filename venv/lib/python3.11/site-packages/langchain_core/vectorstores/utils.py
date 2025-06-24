@@ -42,7 +42,7 @@ def _cosine_similarity(x: Matrix, y: Matrix) -> np.ndarray:
         raise ImportError(msg) from e
 
     if len(x) == 0 or len(y) == 0:
-        return np.array([])
+        return np.array([[]])
 
     x = np.array(x)
     y = np.array(y)
@@ -53,7 +53,7 @@ def _cosine_similarity(x: Matrix, y: Matrix) -> np.ndarray:
         )
         raise ValueError(msg)
     try:
-        import simsimd as simd  # type: ignore
+        import simsimd as simd  # type: ignore[import-not-found]
     except ImportError:
         logger.debug(
             "Unable to import simsimd, defaulting to NumPy implementation. If you want "
