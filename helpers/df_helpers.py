@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from .prompts import extractConcepts
 from .prompts import graphPrompt
+from .prompts import docsgraphPrompt
+from pydantic import BaseModel
+from typing import List
 
 
 def documents2Dataframe(documents) -> pd.DataFrame:
@@ -79,7 +82,7 @@ def docs2Graph(documents: list, model=None) -> list:
     metadata = {"sources": [doc.metadata for doc in documents]}
 
     # Call graphPrompt on the full text
-    result = graphPrompt(full_text, metadata, model)
+    result = docsgraphPrompt(full_text, metadata, model)
 
     # Handle result and flatten
     if result is None:
@@ -98,3 +101,16 @@ def docsgraph2Df(nodes_list) -> pd.DataFrame:
     graph_dataframe["node_2"] = graph_dataframe["node_2"].str.lower()
 
     return graph_dataframe
+
+#define pydantic scheme 
+class Edge(BaseModel):
+    source: str
+    target: str
+    relation: str
+
+class Node(BaseModel):
+    id: str
+
+class GraphJSON(BaseModel):
+    nodes: List[Node]
+    edges: List[Edge]

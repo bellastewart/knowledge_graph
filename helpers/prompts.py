@@ -4,6 +4,8 @@ sys.path.append("..")
 
 import json
 import ollama.client as client
+from helpers.df_helpers import GraphJSON  # adjust if it's defined in the same script
+import json
 
 
 def extractConcepts(prompt: str, metadata={}, model="mistral-openorca:latest"):
@@ -67,3 +69,51 @@ def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
         result = None
     return result
 
+def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
+    G = nx.DiGraph()
+    for node in graph_json.nodes: #instane from class Node
+        G.add_node(node.id)
+    for edge in graph_json.edges:
+        G.add_edge(edge.source, edge.target, relation=edge.relation)
+    return G
+
+def docsgraphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
+    if model == None:
+        model = "mistral-openorca:latest"
+
+    # model_info = client.show(model_name=model)
+    # print( chalk.blue(model_info))
+
+    SYS_PROMPT = (
+        'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
+        'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods.'
+        'You always report a technical term or abbreviation and keep it as it is.'
+        'If you receive a location to an image, you must use it as a node which <id> will be the location and the <type> will be "image" and relate the information in the context to make the nodes and edges relation.'
+        '<relation> in an edge must truly reveal important information that can provide scientific insight from the <source> to the <target>'
+        'Return a JSON with two fields: <nodes> and <edges>.\n'
+        'Each node must have <id> and <type>.\n'
+        'Each edge must have <source>, <target>, and <relation>.'
+    )
+
+    USER_PROMPT = f"context: ```{input}``` \n\n Extract the knowledge graph in structured JSON: "
+    print ('Generating triples...')
+    response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
+    try:
+        cleaned_response = response.strip().strip("```")
+        raw_result = json.loads(cleaned_response)
+
+        # Validate the JSON
+        validated_result = GraphJSON.parse_obj(raw_result)
+
+        # Create the graph (no metadata needed)
+        G = graphjson_to_nx(validated_result)
+
+        # Save the graph
+        nx.write_graphml(G, "temp/full_text.graphml")
+
+        print(f"Generated graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges.")
+
+    except Exception as e:
+        print("\n\nERROR ### Could not parse or validate graph JSON. Here is the buggy response:\n", response)
+        print("Exception:", e, "\n\n")
+        G = None
