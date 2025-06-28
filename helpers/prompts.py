@@ -95,58 +95,53 @@ def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
         G.add_edge(edge.source, edge.target, relation=edge.relation)
     return G
 
-#no chunking metadata passed in 
 def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
-    if model == None:
+    if model is None:
         model = "mistral-openorca:latest"
 
-    # model_info = client.show(model_name=model)
-    # print( chalk.blue(model_info))
-
     SYS_PROMPT = (
-        'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
-        'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods.'
-        'You always report a technical term or abbreviation and keep it as it is.'
-        '<relation> in an edge must truly reveal important information that can provide scientific insight from the <source> to the <target>'
-        'Return a valid JSON with two fields: <nodes> and <edges>.\n'
-        'Each node must have <id>.\n'
-        'Each edge must have <source>, <target>, and <relation>.'
+        "You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. "
+        "You are provided with a context chunk (delimited by ```). Your task is to extract the ontology of terms mentioned in the given context, representing key concepts with well-defined and widely used names of materials, systems, and methods. "
+        "Always preserve technical terms or abbreviations exactly as given. "
+        "Each edge must include a <relation> that reveals meaningful scientific insight from the <source> to the <target>. "
+        "Return a valid JSON with two fields: 'nodes' and 'edges'. "
+        "'nodes' must be a list of objects, each with a unique 'id' field. "
+        "'edges' must be a list of objects, each with 'source', 'target', and 'relation' fields. "
+        "Do not use dictionary keys as node labels — always use lists. Use double quotes throughout."
     )
 
-    USER_PROMPT = f"context: ```{input}``` \n\n Extract the knowledge graph in structured JSON: "
-    print ('Generating triples...')
+    USER_PROMPT = f"context: ```{input}```\n\nExtract the knowledge graph in structured JSON: "
+    print('Generating triples...')
     response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
-    
+
     print("=== RAW LLM RESPONSE ===")
     print(response)
 
     try:
         cleaned_response = response.strip().strip("```")
+        cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
         print("=== CLEANED ===")
         print(cleaned_response)
 
         raw_result = json.loads(cleaned_response)
-        
+
+        # Only convert dicts to lists if needed
         if isinstance(raw_result.get("nodes"), dict):
-            raw_result["nodes"] = list(raw_result["nodes"].values())
+            raw_result["nodes"] = [{"id": k} for k in raw_result["nodes"].keys()]
 
         if isinstance(raw_result.get("edges"), dict):
             raw_result["edges"] = list(raw_result["edges"].values())
 
-        # Validate the JSON
+        # Validate using Pydantic
         validated_result = GraphJSON.model_validate(raw_result)
 
-        # Create the graph (no metadata needed)
+        # Create NetworkX graph
         G = graphjson_to_nx(validated_result)
 
-        # Save the graph
-        #nx.write_graphml(G, "temp/full_text.graphml")
-
         print(f"Generated graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges.")
+        return G
 
     except Exception as e:
         print("\n\nERROR ### Could not parse or validate graph JSON. Here is the buggy response:\n", response)
         print("Exception:", e, "\n\n")
-        G = None
-
-    return G
+        return None
