@@ -6,8 +6,6 @@ import networkx as nx
 from .prompts import extractConcepts
 from .prompts import graphPrompt
 from .prompts import docsgraphPrompt
-from pydantic import BaseModel
-from typing import List
 
 
 
@@ -80,24 +78,3 @@ def graph2Df(nodes_list) -> pd.DataFrame:
 def docs2Graph(documents: list, model=None) -> nx.DiGraph:
     full_text = " ".join([doc.page_content for doc in documents])
     return docsgraphPrompt(full_text, model)
-
-#define pydantic scheme 
-class Edge(BaseModel):
-    source: str
-    target: str
-    relation: str
-
-class Node(BaseModel):
-    id: str
-
-class GraphJSON(BaseModel):
-    nodes: List[Node]
-    edges: List[Edge]
-
-def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
-    G = nx.DiGraph()
-    for node in graph_json.nodes: #instane from class Node
-        G.add_node(node.id)
-    for edge in graph_json.edges:
-        G.add_edge(edge.source, edge.target, relation=edge.relation)
-    return G

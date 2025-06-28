@@ -4,9 +4,11 @@ sys.path.append("..")
 
 import json
 import ollama.client as client
-from helpers.df_helpers import GraphJSON, graphjson_to_nx # adjust if it's defined in the same script
 import json
 import networkx as nx
+
+from pydantic import BaseModel
+from typing import List
 
 
 
@@ -72,6 +74,27 @@ def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
     return result
 
 
+#define pydantic scheme 
+class Edge(BaseModel):
+    source: str
+    target: str
+    relation: str
+
+class Node(BaseModel):
+    id: str
+
+class GraphJSON(BaseModel):
+    nodes: List[Node]
+    edges: List[Edge]
+
+def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
+    G = nx.DiGraph()
+    for node in graph_json.nodes: #instane from class Node
+        G.add_node(node.id)
+    for edge in graph_json.edges:
+        G.add_edge(edge.source, edge.target, relation=edge.relation)
+    return G
+
 #no chunking metadata passed in 
 def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
     if model == None:
@@ -84,10 +107,9 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
         'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods.'
         'You always report a technical term or abbreviation and keep it as it is.'
-        'If you receive a location to an image, you must use it as a node which <id> will be the location and the <type> will be "image" and relate the information in the context to make the nodes and edges relation.'
         '<relation> in an edge must truly reveal important information that can provide scientific insight from the <source> to the <target>'
         'Return a JSON with two fields: <nodes> and <edges>.\n'
-        'Each node must have <id> and <type>.\n'
+        'Each node must have <id>.\n'
         'Each edge must have <source>, <target>, and <relation>.'
     )
 
