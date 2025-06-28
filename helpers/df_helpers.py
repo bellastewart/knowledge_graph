@@ -114,3 +114,11 @@ class Node(BaseModel):
 class GraphJSON(BaseModel):
     nodes: List[Node]
     edges: List[Edge]
+
+def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
+    G = nx.DiGraph()
+    for node in graph_json.nodes: #instane from class Node
+        G.add_node(node.id)
+    for edge in graph_json.edges:
+        G.add_edge(edge.source, edge.target, relation=edge.relation)
+    return G

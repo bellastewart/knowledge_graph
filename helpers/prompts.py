@@ -4,7 +4,7 @@ sys.path.append("..")
 
 import json
 import ollama.client as client
-from helpers.df_helpers import GraphJSON  # adjust if it's defined in the same script
+from helpers.df_helpers import GraphJSON, graphjson_to_nx # adjust if it's defined in the same script
 import json
 
 
@@ -69,15 +69,9 @@ def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
         result = None
     return result
 
-def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
-    G = nx.DiGraph()
-    for node in graph_json.nodes: #instane from class Node
-        G.add_node(node.id)
-    for edge in graph_json.edges:
-        G.add_edge(edge.source, edge.target, relation=edge.relation)
-    return G
 
-def docsgraphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
+#no chunking metadata passed in 
+def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
     if model == None:
         model = "mistral-openorca:latest"
 
@@ -117,3 +111,5 @@ def docsgraphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
         print("\n\nERROR ### Could not parse or validate graph JSON. Here is the buggy response:\n", response)
         print("Exception:", e, "\n\n")
         G = None
+
+    return G
