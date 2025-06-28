@@ -8,11 +8,6 @@ import ollama.client as client
 
 def extractConcepts(prompt: str, metadata={}, model="mistral-openorca:latest"):
     SYS_PROMPT = (
-        "Your task is extract the key concepts (and non personal entities) mentioned in the given context. "
-        "Extract only the most important and atomistic concepts, if  needed break the concepts down to the simpler concepts."
-        "Categorize the concepts in one of the following categories: "
-        "[event, concept, place, object, document, organisation, condition, misc]\n"
-        "Format your output as a list of json with the following format:\n"
         "[\n"
         "   {\n"
         '       "entity": The Concept,\n'

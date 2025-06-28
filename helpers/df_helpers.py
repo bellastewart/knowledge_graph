@@ -69,3 +69,32 @@ def graph2Df(nodes_list) -> pd.DataFrame:
     graph_dataframe["node_2"] = graph_dataframe["node_2"].apply(lambda x: x.lower())
 
     return graph_dataframe
+
+
+def docs2Graph(documents: list, model=None) -> list:
+    # Combine all document texts into one string
+    full_text = " ".join([doc.page_content for doc in documents])
+
+    # Optional: collect metadata if you want to keep track
+    metadata = {"sources": [doc.metadata for doc in documents]}
+
+    # Call graphPrompt on the full text
+    result = graphPrompt(full_text, metadata, model)
+
+    # Handle result and flatten
+    if result is None:
+        return []
+
+    concept_list = np.array(result).ravel().tolist()
+    return concept_list
+
+def docsgraph2Df(nodes_list) -> pd.DataFrame:
+    # Convert to DataFrame and clean
+    graph_dataframe = pd.DataFrame(nodes_list).replace(" ", np.nan)
+    graph_dataframe = graph_dataframe.dropna(subset=["node_1", "node_2"])
+
+    # Normalize text
+    graph_dataframe["node_1"] = graph_dataframe["node_1"].str.lower()
+    graph_dataframe["node_2"] = graph_dataframe["node_2"].str.lower()
+
+    return graph_dataframe

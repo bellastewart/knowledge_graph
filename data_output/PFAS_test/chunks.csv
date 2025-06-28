@@ -1,7 +1,10 @@
 text|source|chunk_id
-Deletion|data_input/PFAS_test/small_test.txt|a009b3c4ff304999af5228de7285f62c
-of SIR4|data_input/PFAS_test/small_test.txt|e2ed0ad6ae754f868e7bf057e29fd5ef
-enhanced|data_input/PFAS_test/small_test.txt|86c5ab08c44f43eea09b621a7fedbe3d
-mURA3 and|data_input/PFAS_test/small_test.txt|49ffd03a9ced4f12a7b48697073be414
-METI5|data_input/PFAS_test/small_test.txt|2a3e2f08fa92477a8bbc9b4ea3f32406
-silencing|data_input/PFAS_test/small_test.txt|aef04d8bd2054f34b6c1d940643f6ca1
+A binary complex of birch profilin and skeletal muscle actin could be isolated by gel chromatography. The interaction between Munc18-2 and syntaxin 3 plays a pivotal role in orchestrating the assembly|data_input/PFAS_test/small_test.txt|9e07f83a2bc1408c9a74fc628d3cf839
+of apical SNARE complexes in epithelial cells, a process essential for maintaining cellular polarity and directional vesicle trafficking. Munc18-2, a member of the Sec1/Munc18 (SM) family of|data_input/PFAS_test/small_test.txt|2d2c20cedca645d7b9f85c6f84ea57fc
+proteins, acts as a molecular chaperone and regulator for syntaxin 3, an apical t-SNARE critical for vesicle fusion at the apical plasma membrane. In polarized epithelial cells, the correct targeting|data_input/PFAS_test/small_test.txt|d88f79a023424efe9e07fefec83940cb
+and fusion of vesicles carrying cargo to the apical surface is mediated by a tightly regulated SNARE complex that typically includes syntaxin 3, SNAP-23, and VAMPs (v-SNAREs). Munc18-2 binds directly|data_input/PFAS_test/small_test.txt|dfd6b5d53eaa4511841634552023cfeb
+to syntaxin 3 in a closed conformation, initially inhibiting premature SNARE complex formation, thereby ensuring temporal and spatial control over vesicle fusion. However, upon receiving appropriate|data_input/PFAS_test/small_test.txt|0723a7c202944576a85fb43132389d28
+regulatory signals—potentially involving Rab GTPases or other polarity cues—Munc18-2 facilitates the transition of syntaxin 3 to an open, fusogenic state, promoting the assembly of the ternary SNARE|data_input/PFAS_test/small_test.txt|2e1b3a53eee344eba6430375ab943bd7
+complex. Disruption of this interaction can lead to defects in apical membrane delivery and cell polarity, underscoring its physiological importance. Moreover, mutations in Munc18-2 (e.g., associated|data_input/PFAS_test/small_test.txt|e660bf2e42784efb863fce4383f474b8
+with familial hemophagocytic lymphohistiocytosis type 5) have been shown to compromise epithelial trafficking, further highlighting this interaction’s relevance to human disease. Overall, the|data_input/PFAS_test/small_test.txt|5710744ff2924c868aaeaadbdded8b53
+Munc18-2–syntaxin 3 axis serves as a critical checkpoint in the regulation of apical membrane dynamics and epithelial cell homeostasis.|data_input/PFAS_test/small_test.txt|8dc4942637024c1f921c65a5920d2749

@@ -1,4 +1,24 @@
 node_1|node_2|edge|chunk_id
-deletion|operation|Deletion is a type of operation, specifically an undo operation that removes data from a system.|a009b3c4ff304999af5228de7285f62c
-sir4|histone h3 variant|SIR4 is a histone chaperone complex that associates with the histone H3 variant, H3-S10ph in budding yeast.|e2ed0ad6ae754f868e7bf057e29fd5ef
-noise|silencing|the process of reducing or eliminating noise is known as silencing, which can be achieved through various techniques such as noise cancellation, active noise control, and shielding.|aef04d8bd2054f34b6c1d940643f6ca1
+apical snare complexes|directional vesicle trafficking|is essential for maintaining cellular polarity and contributing to the process of directional vesicle trafficking.|2d2c20cedca645d7b9f85c6f84ea57fc
+apical snare complexes|maintaining cellular polarity|is essential for.|2d2c20cedca645d7b9f85c6f84ea57fc
+munc18-2|apical snare complexes|is a member of.|2d2c20cedca645d7b9f85c6f84ea57fc
+proteins|syntaxin 3|acts as a molecular chaperone for|d88f79a023424efe9e07fefec83940cb
+syntaxin 3|apical t-snare|critical for vesicle fusion at the apical plasma membrane in polarized epithelial cells|d88f79a023424efe9e07fefec83940cb
+syntaxin 3|apical surface|is transported to through the mediation of a tightly regulated SNARE complex that includes syntaxin 3.|dfd6b5d53eaa4511841634552023cfeb
+snap-23|apical surface|is transported to through the mediation of a tightly regulated SNARE complex that includes SNAP-23 and VAMPs (v-SNAREs).|dfd6b5d53eaa4511841634552023cfeb
+vamps|apical surface|are part of the tightly regulated SNARE complex that mediates the fusion and transportation of cargo to the apical surface.|dfd6b5d53eaa4511841634552023cfeb
+syntaxin 3|snap-23|are both part of the tightly regulated SNARE complex that mediates vesicle fusion and transportation to the apical surface.|dfd6b5d53eaa4511841634552023cfeb
+munc18-2|syntaxin 3|binds directly to syntaxin 3, which is part of the tightly regulated SNARE complex that mediates vesicle fusion and transportation to the apical surface.|dfd6b5d53eaa4511841634552023cfeb
+munc18-2|snap-23|also binds directly to SNAP-23, which is part of the tightly regulated SNARE complex that mediates vesicle fusion and transportation to the apical surface.|dfd6b5d53eaa4511841634552023cfeb
+syntaxin 3|snare complex formation|initially inhibiting premature SNARE complex formation|0723a7c202944576a85fb43132389d28
+regulatory signals|rab gtpases or other polarity cues|The regulatory signals, which could be Rab GTPases or other polarity cues, facilitate the transition of syntaxin 3 to an open, fusogenic state in the context discussed.|2e1b3a53eee344eba6430375ab943bd7
+munc18-2|regulatory signals|Munc18-2 facilitates the transition of syntaxin 3 to an open, fusogenic state in response to regulatory signals as mentioned.|2e1b3a53eee344eba6430375ab943bd7
+syntaxin 3|open, fusogenic state|The context explains that syntaxin 3 undergoes a transition from a closed, non-fusogenic state to an open, fusogenic state, which is necessary for vesicle fusion.|2e1b3a53eee344eba6430375ab943bd7
+munc18-2|syntaxin 3|As per the given context, Munc18-2 facilitates the transition of syntaxin 3 from a closed, non-fusogenic state to an open, fusogenic state promoting the assembly of the ternary SNARE complex.|2e1b3a53eee344eba6430375ab943bd7
+ternary snare|syntaxin 3|The context mentions that the assembly of the ternary SNARE complex, which is composed of syntaxin, SNAP-25, and synaptobrevin, is promoted by Munc18-2 as syntaxin 3 undergoes a transition to an open, fusogenic state.|2e1b3a53eee344eba6430375ab943bd7
+munc18-2|apical membrane delivery|Disruption of the interaction between Munc18-2 and apical membrane delivery can lead to defects, highlighting its physiological importance.|e660bf2e42784efb863fce4383f474b8
+munc18-2|cell polarity|Disruption of the interaction between Munc18-2 and cell polarity can lead to defects, underscoring its physiological importance.|e660bf2e42784efb863fce4383f474b8
+mutations|munc18-2|Associated mutations in Munc18-2.|e660bf2e42784efb863fce4383f474b8
+familial hemophagocytic lymphohistiocytosis type 5|epithelial trafficking|Patients with familial hemophagocytic lymphohistiocytosis type 5 have been shown to compromise epithelial trafficking, indicating a relevant association between familial hemophagocytic lymphohistiocytosis type 5 and epithelial trafficking in the context of human disease.|5710744ff2924c868aaeaadbdded8b53
+munc18-2|axis|serves as a critical checkpoint in the regulation of apical membrane dynamics and epithelial cell homeostasis.|8dc4942637024c1f921c65a5920d2749
+munc18-2|syntaxin 3|part of the Munc18-2–syntaxin 3 axis.|8dc4942637024c1f921c65a5920d2749
