@@ -5,6 +5,7 @@ sys.path.append("..")
 import json
 import ollama.client as client
 import json
+import re
 import networkx as nx
 
 from pydantic import BaseModel
@@ -101,13 +102,15 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
 
     SYS_PROMPT = (
         "You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. "
-        "You are provided with a context chunk (delimited by ```). Your task is to extract the ontology of terms mentioned in the given context, representing key concepts with well-defined and widely used names of materials, systems, and methods. "
+        "You are provided with a context chunk (delimited by triple backticks: ```). "
+        "Your task is to extract the ontology of terms mentioned in the given context, representing key concepts with well-defined and widely used names of materials, systems, and methods. "
         "Always preserve technical terms or abbreviations exactly as given. "
         "Each edge must include a <relation> that reveals meaningful scientific insight from the <source> to the <target>. "
-        "Return a valid JSON with two fields: 'nodes' and 'edges'. "
+        "Return a strictly valid JSON object with two fields: 'nodes' and 'edges'. "
         "'nodes' must be a list of objects, each with a unique 'id' field. "
-        "'edges' must be a list of objects, each with 'source', 'target', and 'relation' fields. "
-        "Do not use dictionary keys as node labels — always use lists. Use double quotes throughout."
+        "'edges' must be a list of objects, each with exactly one 'source', one 'target', and one 'relation' field. "
+        "Do NOT include duplicate fields or trailing commas. "
+        "Use double quotes for all keys and string values, and return only the JSON object — no commentary, explanation, or markdown formatting like triple backticks."
     )
 
     USER_PROMPT = f"context: ```{input}```\n\nExtract the knowledge graph in structured JSON: "
@@ -120,6 +123,7 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
     try:
         cleaned_response = response.strip().strip("```")
         cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
+
         print("=== CLEANED ===")
         print(cleaned_response)
 
