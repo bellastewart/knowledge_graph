@@ -1,11 +1,14 @@
 import uuid
 import pandas as pd
 import numpy as np
+import networkx as nx
+
 from .prompts import extractConcepts
 from .prompts import graphPrompt
 from .prompts import docsgraphPrompt
 from pydantic import BaseModel
 from typing import List
+
 
 
 def documents2Dataframe(documents) -> pd.DataFrame:
@@ -74,33 +77,9 @@ def graph2Df(nodes_list) -> pd.DataFrame:
     return graph_dataframe
 
 
-def docs2Graph(documents: list, model=None) -> list:
-    # Combine all document texts into one string
+def docs2Graph(documents: list, model=None) -> nx.DiGraph:
     full_text = " ".join([doc.page_content for doc in documents])
-
-    # Optional: collect metadata if you want to keep track
-    metadata = {"sources": [doc.metadata for doc in documents]}
-
-    # Call graphPrompt on the full text
-    result = docsgraphPrompt(full_text, metadata, model)
-
-    # Handle result and flatten
-    if result is None:
-        return []
-
-    concept_list = np.array(result).ravel().tolist()
-    return concept_list
-
-def docsgraph2Df(nodes_list) -> pd.DataFrame:
-    # Convert to DataFrame and clean
-    graph_dataframe = pd.DataFrame(nodes_list).replace(" ", np.nan)
-    graph_dataframe = graph_dataframe.dropna(subset=["node_1", "node_2"])
-
-    # Normalize text
-    graph_dataframe["node_1"] = graph_dataframe["node_1"].str.lower()
-    graph_dataframe["node_2"] = graph_dataframe["node_2"].str.lower()
-
-    return graph_dataframe
+    return docsgraphPrompt(full_text, model)
 
 #define pydantic scheme 
 class Edge(BaseModel):

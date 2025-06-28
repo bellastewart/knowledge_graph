@@ -6,6 +6,8 @@ import json
 import ollama.client as client
 from helpers.df_helpers import GraphJSON, graphjson_to_nx # adjust if it's defined in the same script
 import json
+import networkx as nx
+
 
 
 def extractConcepts(prompt: str, metadata={}, model="mistral-openorca:latest"):
