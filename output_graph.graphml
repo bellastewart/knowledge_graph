@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
+<graph edgedefault="directed"><node id="PDMS"/>
+<node id="carbon black"/>
+<node id="iron(II) sulfate"/>
+<node id="hydrogen peroxide"/>
+<node id="pH buffering agents"/>
+<node id="zinc oxide"/>
+<node id="lactic acid"/>
+<node id="polyethylene oxide"/>
+<node id="lithium salt"/>
+<node id="ceramic nanoparticles"/>
+<node id="plasticizers"/>
+<node id="chitosan"/>
+<node id="genipin"/>
+<edge source="PDMS" target="carbon black">
+  <data key="d0">combine</data>
+</edge>
+<edge source="iron(II) sulfate" target="hydrogen peroxide">
+  <data key="d0">during oxidative crosslinking of matrix proteins</data>
+</edge>
+<edge source="iron(II) sulfate" target="pH buffering agents">
+  <data key="d0">during oxidative crosslinking of matrix proteins</data>
+</edge>
+<edge source="zinc oxide" target="lactic acid">
+  <data key="d0">promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings.</data>
+</edge>
+</graph></graphml>

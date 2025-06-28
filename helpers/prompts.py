@@ -105,11 +105,11 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         "You are provided with a context chunk (delimited by triple backticks: ```). "
         "Your task is to extract the ontology of terms mentioned in the given context, representing key concepts with well-defined and widely used names of materials, systems, and methods. "
         "Always preserve technical terms or abbreviations exactly as given. "
-        "Each edge must include a <relation> that reveals meaningful scientific insight from the <source> to the <target>. "
+        "Each edge must include a <relation> that reveals meaningful scientific insight about the relationship from the <source> to the <target>. "
         "Return a strictly valid JSON object with two fields: 'nodes' and 'edges'. "
         "'nodes' must be a list of objects, each with a unique 'id' field. "
-        "'edges' must be a list of objects, each with exactly one 'source', one 'target', and one 'relation' field. "
-        "Do NOT include duplicate fields or trailing commas. "
+        "'edges' must be a list of objects, each with ONLY one single 'source', one single 'target', and one single 'relation' field."
+        "Do NOT include trailing commas. "
         "Use double quotes for all keys and string values, and return only the JSON object — no commentary, explanation, or markdown formatting like triple backticks."
     )
 
@@ -124,8 +124,8 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         cleaned_response = response.strip().strip("```")
         cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
 
-        print("=== CLEANED ===")
-        print(cleaned_response)
+        #print("=== CLEANED ===")
+        #print(cleaned_response)
 
         raw_result = json.loads(cleaned_response)
 
