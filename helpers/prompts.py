@@ -97,7 +97,7 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         raw_result = json.loads(cleaned_response)
 
         # Validate the JSON
-        validated_result = GraphJSON.parse_obj(raw_result)
+        validated_result = GraphJSON.model_validate(raw_result)
 
         # Create the graph (no metadata needed)
         G = graphjson_to_nx(validated_result)
