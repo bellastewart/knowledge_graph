@@ -269,23 +269,23 @@ function highlightFilter(filter) {
                                 
                                     <option value="PDMS">PDMS</option>
                                 
-                                    <option value="carbon black">carbon black</option>
+                                    <option value="carbon_black">carbon_black</option>
                                 
-                                    <option value="iron(II) sulfate">iron(II) sulfate</option>
+                                    <option value="iron(II)_sulfate">iron(II)_sulfate</option>
                                 
-                                    <option value="hydrogen peroxide">hydrogen peroxide</option>
+                                    <option value="hydrogen_peroxide">hydrogen_peroxide</option>
                                 
-                                    <option value="pH buffering agents">pH buffering agents</option>
+                                    <option value="pH_buffering_agents">pH_buffering_agents</option>
                                 
-                                    <option value="zinc oxide">zinc oxide</option>
+                                    <option value="Zinc_oxide">Zinc_oxide</option>
                                 
-                                    <option value="lactic acid">lactic acid</option>
+                                    <option value="lactic_acid">lactic_acid</option>
                                 
-                                    <option value="polyethylene oxide">polyethylene oxide</option>
+                                    <option value="Polyethylene_oxide">Polyethylene_oxide</option>
                                 
-                                    <option value="lithium salt">lithium salt</option>
+                                    <option value="lithium_salt">lithium_salt</option>
                                 
-                                    <option value="ceramic nanoparticles">ceramic nanoparticles</option>
+                                    <option value="ceramic_nanoparticles">ceramic_nanoparticles</option>
                                 
                                     <option value="plasticizers">plasticizers</option>
                                 
@@ -347,8 +347,8 @@ function highlightFilter(filter) {
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"group": 1, "id": "PDMS", "label": "PDMS", "shape": "dot", "size": 1}, {"group": 2, "id": "carbon black", "label": "carbon black", "shape": "dot", "size": 1}, {"group": 7, "id": "iron(II) sulfate", "label": "iron(II) sulfate", "shape": "dot", "size": 2}, {"group": 6, "id": "hydrogen peroxide", "label": "hydrogen peroxide", "shape": "dot", "size": 1}, {"group": 7, "id": "pH buffering agents", "label": "pH buffering agents", "shape": "dot", "size": 1}, {"group": 8, "id": "zinc oxide", "label": "zinc oxide", "shape": "dot", "size": 1}, {"group": 8, "id": "lactic acid", "label": "lactic acid", "shape": "dot", "size": 1}, {"group": 11, "id": "polyethylene oxide", "label": "polyethylene oxide", "shape": "dot", "size": 0}, {"group": 9, "id": "lithium salt", "label": "lithium salt", "shape": "dot", "size": 0}, {"group": 3, "id": "ceramic nanoparticles", "label": "ceramic nanoparticles", "shape": "dot", "size": 0}, {"group": 10, "id": "plasticizers", "label": "plasticizers", "shape": "dot", "size": 0}, {"group": 4, "id": "chitosan", "label": "chitosan", "shape": "dot", "size": 0}, {"group": 5, "id": "genipin", "label": "genipin", "shape": "dot", "size": 0}]);
-                  edges = new vis.DataSet([{"from": "PDMS", "relation": "combine", "to": "carbon black", "width": 1}, {"from": "iron(II) sulfate", "relation": "during oxidative crosslinking of matrix proteins", "to": "hydrogen peroxide", "width": 1}, {"from": "iron(II) sulfate", "relation": "during oxidative crosslinking of matrix proteins", "to": "pH buffering agents", "width": 1}, {"from": "zinc oxide", "relation": "promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings.", "to": "lactic acid", "width": 1}]);
+                  nodes = new vis.DataSet([{"group": 1, "id": "PDMS", "label": "PDMS", "shape": "dot", "size": 1}, {"group": 1, "id": "carbon_black", "label": "carbon_black", "shape": "dot", "size": 1}, {"group": 6, "id": "iron(II)_sulfate", "label": "iron(II)_sulfate", "shape": "dot", "size": 2}, {"group": 5, "id": "hydrogen_peroxide", "label": "hydrogen_peroxide", "shape": "dot", "size": 1}, {"group": 6, "id": "pH_buffering_agents", "label": "pH_buffering_agents", "shape": "dot", "size": 1}, {"group": 3, "id": "Zinc_oxide", "label": "Zinc_oxide", "shape": "dot", "size": 1}, {"group": 3, "id": "lactic_acid", "label": "lactic_acid", "shape": "dot", "size": 1}, {"group": 2, "id": "Polyethylene_oxide", "label": "Polyethylene_oxide", "shape": "dot", "size": 3}, {"group": 7, "id": "lithium_salt", "label": "lithium_salt", "shape": "dot", "size": 1}, {"group": 2, "id": "ceramic_nanoparticles", "label": "ceramic_nanoparticles", "shape": "dot", "size": 1}, {"group": 2, "id": "plasticizers", "label": "plasticizers", "shape": "dot", "size": 1}, {"group": 4, "id": "chitosan", "label": "chitosan", "shape": "dot", "size": 1}, {"group": 4, "id": "genipin", "label": "genipin", "shape": "dot", "size": 1}]);
+                  edges = new vis.DataSet([{"from": "PDMS", "relation": "combines with", "to": "carbon_black", "width": 1}, {"from": "iron(II)_sulfate", "relation": "interplays with during oxidative crosslinking", "to": "hydrogen_peroxide", "width": 1}, {"from": "iron(II)_sulfate", "relation": "interplays with during oxidative crosslinking", "to": "pH_buffering_agents", "width": 1}, {"from": "Zinc_oxide", "relation": "works together to promote antibacterial activity and osteoinductivity", "to": "lactic_acid", "width": 1}, {"from": "Polyethylene_oxide", "relation": "together produce a solid polymer electrolyte useful for biosensing applications", "to": "lithium_salt", "width": 1}, {"from": "Polyethylene_oxide", "relation": "together produce a solid polymer electrolyte useful for biosensing applications", "to": "ceramic_nanoparticles", "width": 1}, {"from": "Polyethylene_oxide", "relation": "together produce a solid polymer electrolyte useful for biosensing applications", "to": "plasticizers", "width": 1}, {"from": "chitosan", "relation": "crosslinks to form a biocompatible, elastic hydrogel matrix", "to": "genipin", "width": 1}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });

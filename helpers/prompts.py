@@ -106,11 +106,9 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         "Your task is to extract the ontology of terms mentioned in the given context, representing key concepts with well-defined and widely used names of materials, systems, and methods. "
         "Always preserve technical terms or abbreviations exactly as given. "
         "Each edge must include a <relation> that reveals meaningful scientific insight about the relationship from the <source> to the <target>. "
-        "Return a strictly valid JSON object with two fields: 'nodes' and 'edges'. "
-        "'nodes' must be a list of objects, each with a unique 'id' field. "
-        "'edges' must be a list of objects, each with ONLY one single 'source', one single 'target', and one single 'relation' field."
-        "Do NOT include trailing commas. "
-        "Use double quotes for all keys and string values, and return only the JSON object — no commentary, explanation, or markdown formatting like triple backticks."
+        "Return a JSON with two fields: <nodes> and <edges>. "
+        "Each node must have <id>."
+        "Each edge must have <source>, <target>, and <relation>."
     )
 
     USER_PROMPT = f"context: ```{input}```\n\nExtract the knowledge graph in structured JSON: "
