@@ -7,6 +7,8 @@ import ollama.client as client
 import json
 import re
 import networkx as nx
+import hypernetx as hnx
+
 
 from pydantic import BaseModel
 from typing import List
@@ -145,5 +147,57 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
 
     except Exception as e:
         print("\n\nERROR ### Could not parse or validate graph JSON. Here is the buggy response:\n", response)
+        print("Exception:", e, "\n\n")
+        return None
+    
+
+
+### HYPERGRAPH ### 
+###
+# Define Pydantic schema for hypergraph
+class Event(BaseModel):
+    id: str
+    entities: List[str]  # All co-dependent entities in this event
+
+class HypergraphJSON(BaseModel):
+    events: List[Event]  # Each event defines a hyperedge of entities
+
+def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
+    if model is None:
+        model = "mistral-openorca:latest"
+
+    SYS_PROMPT = (
+        "You are a hypergraph extractor identifying co-dependent entities from scientific text. "
+        "Your task is to detect when multiple entities participate in a single scientific event, and group them under that event. "
+        "Each group of entities that co-occur in an event should be listed under an <id> that names the event. "
+        "Return a JSON with a single key: <events>, which is a list. Each item must have an <id> (the event name or description) and a list of <entities> (co-dependent terms that belong to this event). "
+        "Preserve scientific terminology exactly as written."
+    )
+
+    USER_PROMPT = f"context: ```{input}```\n\nExtract the hypergraph-style JSON with co-occurring entities grouped by event: "
+    print('Generating hypergraph events...')
+    response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
+
+    print("=== RAW LLM RESPONSE ===")
+    print(response)
+
+    try:
+        cleaned_response = response.strip().strip("```")
+        cleaned_response = re.sub(r",\s*([}\]])", r"\\1", cleaned_response)
+
+        raw_result = json.loads(cleaned_response)
+
+        # Validate with Pydantic
+        validated_result = HypergraphJSON.model_validate(raw_result)
+
+        # Convert to HyperNetX format
+        edge_dict = {event.id: set(event.entities) for event in validated_result.events}
+        H = hnx.Hypergraph(edge_dict)
+
+        print(f"Generated hypergraph with {len(H.nodes)} nodes and {len(H.edges)} hyperedges.")
+        return H
+
+    except Exception as e:
+        print("\n\nERROR ### Could not parse or validate hypergraph JSON. Here is the buggy response:\n", response)
         print("Exception:", e, "\n\n")
         return None

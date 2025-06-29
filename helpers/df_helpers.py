@@ -2,10 +2,13 @@ import uuid
 import pandas as pd
 import numpy as np
 import networkx as nx
+import hypernetx as hnx 
 
 from .prompts import extractConcepts
 from .prompts import graphPrompt
 from .prompts import docsgraphPrompt
+from .prompts import docsHypergraphPrompt
+
 
 
 
@@ -78,3 +81,7 @@ def graph2Df(nodes_list) -> pd.DataFrame:
 def docs2Graph(documents: list, model=None) -> nx.DiGraph:
     full_text = " ".join([doc.page_content for doc in documents])
     return docsgraphPrompt(full_text, model)
+
+def docs2Hypergraph(documents: list, model=None) -> hnx.Hypergraph:
+    full_text = " ".join([doc.page_content for doc in documents])
+    return docsHypergraphPrompt(full_text, model)
