@@ -1,0 +1,75 @@
+event,entity
+e1,carbon black
+e1,PDMS
+e10,citric acid
+e10,bacterial cellulose
+e10,zinc oxide
+e11,citric acid
+e11,polyvinyl alcohol
+e11,starch
+e12,chitosan
+e12,silver nanoparticles
+e13,Chitosan
+e13,silver nanoparticles
+e13,gelatin
+e14,Polycaprolactone
+e14,beta-TCP
+e15,carbon nanotubes
+e15,PDMS
+e16,collagen
+e16,hydroxyapatite
+e17,Polyvinyl alcohol
+e17,starch
+e18,hyaluronic acid
+e18,gelatin
+e19,eucalyptus oil
+e19,silver nanoparticles
+e2,hydrogen peroxide
+e2,pH buffering agents
+e2,iron(II) sulfate
+e20,Chitosan
+e20,citric acid
+e21,ionic liquid
+e21,carbon nanotubes
+e22,polyethylene glycol
+e22,gelatin
+e23,Chitosan
+e23,gelatin
+e24,ionic liquid
+e24,PDMS
+e25,silver nanoparticles
+e25,zinc oxide
+e26,bacterial cellulose
+e26,genipin
+e27,Polyethylene oxide
+e27,gelatin
+e28,collagen
+e28,hydroxyapatite
+e29,zinc oxide
+e29,UV-curing
+e3,Zinc oxide
+e3,lactic acid
+e30,carbon nanotubes
+e30,silk fibroin
+e31,chitosan
+e31,silver nitrate
+e32,iron salt
+e32,polydopamine
+e4,lithium salt
+e4,plasticizers
+e4,Polyethylene oxide
+e4,ceramic nanoparticles
+e5,Chitosan
+e5,genipin
+e6,hyaluronic acid
+e6,crosslinkers
+e6,gelatin
+e7,ionic liquid
+e7,carbon nanotubes
+e7,pressure-sensitive dye
+e7,PDMS
+e8,silver nitrate
+e8,polyvinyl alcohol
+e9,porogens
+e9,Polycaprolactone
+e9,beta-TCP

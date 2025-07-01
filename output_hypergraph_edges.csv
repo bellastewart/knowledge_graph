@@ -1,17 +1,76 @@
 event,entity
-"Chitosan and genipin crosslink to form a biocompatible, elastic hydrogel matrix for cartilage and soft-tissue regeneration",chitosan
-"Chitosan and genipin crosslink to form a biocompatible, elastic hydrogel matrix for cartilage and soft-tissue regeneration",genipin
-"Interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins in engineered bone grafts",iron(II) sulfate
-"Interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins in engineered bone grafts",matrix proteins
-"Interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins in engineered bone grafts",hydrogen peroxide
-"Interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins in engineered bone grafts",pH buffering agents
-"PDMS and carbon black combine to form a flexible, piezoresistive matrix",PDMS
-"PDMS and carbon black combine to form a flexible, piezoresistive matrix",carbon black
-"Polyethylene oxide, lithium salt, ceramic nanoparticles, plasticizers produce a solid polymer electrolyte for biosensing applications in smart bone implants",plasticizers
-"Polyethylene oxide, lithium salt, ceramic nanoparticles, plasticizers produce a solid polymer electrolyte for biosensing applications in smart bone implants",ceramic nanoparticles
-"Polyethylene oxide, lithium salt, ceramic nanoparticles, plasticizers produce a solid polymer electrolyte for biosensing applications in smart bone implants",lithium salt
-"Polyethylene oxide, lithium salt, ceramic nanoparticles, plasticizers produce a solid polymer electrolyte for biosensing applications in smart bone implants",polyethylene oxide
-Zinc oxide and lactic acid promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings,osteoinductivity
-Zinc oxide and lactic acid promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings,zinc oxide
-Zinc oxide and lactic acid promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings,lactic acid
-Zinc oxide and lactic acid promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings,antibacterial activity
+"Bacterial cellulose and genipin, reinforced with calcium ions and ethanol crosslinking, yield a stable hydrogel with tunable degradation for cartilage repair.",bacterial cellulose
+"Bacterial cellulose and genipin, reinforced with calcium ions and ethanol crosslinking, yield a stable hydrogel with tunable degradation for cartilage repair.",genipin
+"Bacterial cellulose, citric acid, zinc oxide, eucalyptus oil, and sonication act together to fabricate a breathable, antimicrobial membrane suitable for chronic wound healing and skin graft applications.",bacterial cellulose
+"Bacterial cellulose, citric acid, zinc oxide, eucalyptus oil, and sonication act together to fabricate a breathable, antimicrobial membrane suitable for chronic wound healing and skin graft applications.",citric acid
+"Bacterial cellulose, citric acid, zinc oxide, eucalyptus oil, and sonication act together to fabricate a breathable, antimicrobial membrane suitable for chronic wound healing and skin graft applications.",zinc oxide
+"Carbon nanotubes, silk fibroin, glycerol, and ethanol work together to form a stretchable biocompatible sensor layer for tendon repair monitoring.",silk fibroin
+"Carbon nanotubes, silk fibroin, glycerol, and ethanol work together to form a stretchable biocompatible sensor layer for tendon repair monitoring.",carbon nanotubes
+"Chitosan and citric acid together reinforce polymeric scaffolds, providing both structural strength and reactive functional groups for growth factor attachment.",Chitosan
+"Chitosan and citric acid together reinforce polymeric scaffolds, providing both structural strength and reactive functional groups for growth factor attachment.",citric acid
+"Chitosan and genipin crosslink to form a biocompatible, elastic hydrogel matrix for cartilage and soft-tissue regeneration.",Chitosan
+"Chitosan and genipin crosslink to form a biocompatible, elastic hydrogel matrix for cartilage and soft-tissue regeneration.",genipin
+"Chitosan, gelatin, calcium phosphate, and glycerol act in unison to form a flexible yet mineralized scaffold suitable for soft-to-hard tissue transitions.",Chitosan
+"Chitosan, gelatin, calcium phosphate, and glycerol act in unison to form a flexible yet mineralized scaffold suitable for soft-to-hard tissue transitions.",gelatin
+"Chitosan, silver nanoparticles, and gelatin function synergistically to form an injectable, antimicrobial matrix for bone defect healing.",Chitosan
+"Chitosan, silver nanoparticles, and gelatin function synergistically to form an injectable, antimicrobial matrix for bone defect healing.",silver nanoparticles
+"Chitosan, silver nanoparticles, and gelatin function synergistically to form an injectable, antimicrobial matrix for bone defect healing.",gelatin
+"Hydroxyapatite and collagen, augmented by BMP-2, alginate, and magnetic stirring, form a composite conducive to controlled growth factor release and bone matrix mimicry.",collagen
+"Hydroxyapatite and collagen, augmented by BMP-2, alginate, and magnetic stirring, form a composite conducive to controlled growth factor release and bone matrix mimicry.",hydroxyapatite
+"Only when polyvinyl alcohol, citric acid, and starch are blended under pressure does the biocomposite scaffold attain the mechanical strength required for soft tissue support.",polyvinyl alcohol
+"Only when polyvinyl alcohol, citric acid, and starch are blended under pressure does the biocomposite scaffold attain the mechanical strength required for soft tissue support.",citric acid
+"Only when polyvinyl alcohol, citric acid, and starch are blended under pressure does the biocomposite scaffold attain the mechanical strength required for soft tissue support.",starch
+"Only with carbon nanotubes, ionic liquid, and gelatin can a conductive soft tissue interface maintain durability under physiological strain cycles.",carbon nanotubes
+"Only with carbon nanotubes, ionic liquid, and gelatin can a conductive soft tissue interface maintain durability under physiological strain cycles.",ionic liquid
+"Osteoconductive scaffold stability is achieved through the joint presence of polyvinyl alcohol, silver nitrate, and controlled heating during thermal gelation and antimicrobial surface formation.",polyvinyl alcohol
+"Osteoconductive scaffold stability is achieved through the joint presence of polyvinyl alcohol, silver nitrate, and controlled heating during thermal gelation and antimicrobial surface formation.",silver nitrate
+"PDMS and carbon black combine to create a flexible, piezoresistive matrix ideal for embedding strain sensors in load-bearing tissue constructs.",PDMS
+"PDMS and carbon black combine to create a flexible, piezoresistive matrix ideal for embedding strain sensors in load-bearing tissue constructs.",carbon black
+PDMS and carbon nanotubes operate together to construct a stretchable biosensor layer capable of monitoring strain across healing tendon or ligament scaffolds.,PDMS
+PDMS and carbon nanotubes operate together to construct a stretchable biosensor layer capable of monitoring strain across healing tendon or ligament scaffolds.,carbon nanotubes
+"PDMS, carbon nanotubes, ionic liquid, pressure-sensitive dye, and laser excitation together enable high-resolution tactile sensing in engineered skin or musculoskeletal prosthetics.",PDMS
+"PDMS, carbon nanotubes, ionic liquid, pressure-sensitive dye, and laser excitation together enable high-resolution tactile sensing in engineered skin or musculoskeletal prosthetics.",carbon nanotubes
+"PDMS, carbon nanotubes, ionic liquid, pressure-sensitive dye, and laser excitation together enable high-resolution tactile sensing in engineered skin or musculoskeletal prosthetics.",ionic liquid
+"PDMS, carbon nanotubes, ionic liquid, pressure-sensitive dye, and laser excitation together enable high-resolution tactile sensing in engineered skin or musculoskeletal prosthetics.",pressure-sensitive dye
+"PDMS, pressure-sensitive dye, ionic liquid, and crosslinked collagen enable dynamic load-sensing within tissue-engineered ligament constructs.",PDMS
+"PDMS, pressure-sensitive dye, ionic liquid, and crosslinked collagen enable dynamic load-sensing within tissue-engineered ligament constructs.",ionic liquid
+Polycaprolactone and beta-TCP must be co-processed with citric acid to enable both mineralization and elastic response in bioresorbable scaffold fabrication.,beta-TCP
+Polycaprolactone and beta-TCP must be co-processed with citric acid to enable both mineralization and elastic response in bioresorbable scaffold fabrication.,Polycaprolactone
+"Polycaprolactone, beta-TCP, porogens, and controlled temperature must act in unison to generate a porous, bioresorbable structure mimicking cancellous bone.",beta-TCP
+"Polycaprolactone, beta-TCP, porogens, and controlled temperature must act in unison to generate a porous, bioresorbable structure mimicking cancellous bone.",Polycaprolactone
+"Polydopamine, dopamine, and FeCl3 form a self-assembled polymer that crosslinks with collagen to create a conductive material for tissue engineering.",FeCl3
+"Polydopamine, dopamine, and FeCl3 form a self-assembled polymer that crosslinks with collagen to create a conductive material for tissue engineering.",Polydopamine
+"Polydopamine, dopamine, and FeCl3 form a self-assembled polymer that crosslinks with collagen to create a conductive material for tissue engineering.",dopamine
+"Polyethylene oxide and gelatin, when combined with freeze-thaw cycling and growth factor encapsulation, produce cryogels with high bioactivity and porosity for stem cell delivery.",Polyethylene oxide
+"Polyethylene oxide and gelatin, when combined with freeze-thaw cycling and growth factor encapsulation, produce cryogels with high bioactivity and porosity for stem cell delivery.",gelatin
+"Polyethylene oxide, lithium salt, ceramic nanoparticles, and plasticizers together produce a solid polymer electrolyte useful for biosensing applications integrated into smart bone implants.",lithium salt
+"Polyethylene oxide, lithium salt, ceramic nanoparticles, and plasticizers together produce a solid polymer electrolyte useful for biosensing applications integrated into smart bone implants.",ceramic nanoparticles
+"Polyethylene oxide, lithium salt, ceramic nanoparticles, and plasticizers together produce a solid polymer electrolyte useful for biosensing applications integrated into smart bone implants.",plasticizers
+"Polyethylene oxide, lithium salt, ceramic nanoparticles, and plasticizers together produce a solid polymer electrolyte useful for biosensing applications integrated into smart bone implants.",Polyethylene oxide
+"Polyvinyl alcohol, starch, and zinc oxide blend to enhance scaffold mechanical stiffness and local antibacterial effects for cranial repair patches.",Polyvinyl alcohol
+"Polyvinyl alcohol, starch, and zinc oxide blend to enhance scaffold mechanical stiffness and local antibacterial effects for cranial repair patches.",starch
+"Polyvinyl alcohol, starch, and zinc oxide blend to enhance scaffold mechanical stiffness and local antibacterial effects for cranial repair patches.",zinc oxide
+"Silver nanoparticles and eucalyptus oil, stabilized by bacterial cellulose, deliver sustained antimicrobial protection in wound-dressing biomaterials.",eucalyptus oil
+"Silver nanoparticles and eucalyptus oil, stabilized by bacterial cellulose, deliver sustained antimicrobial protection in wound-dressing biomaterials.",Silver nanoparticles
+"Silver nanoparticles, chitosan, polyvinyl alcohol, crosslinking agents, and pH modulation collectively determine the antimicrobial and mechanical efficacy of hydrogel-based wound dressings.",silver nanoparticles
+"Silver nanoparticles, chitosan, polyvinyl alcohol, crosslinking agents, and pH modulation collectively determine the antimicrobial and mechanical efficacy of hydrogel-based wound dressings.",chitosan
+"Silver nanoparticles, zinc oxide, citric acid, and polyvinyl alcohol jointly inhibit bacterial colonization while preserving cell adhesion in dermal regeneration scaffolds.",zinc oxide
+"Silver nanoparticles, zinc oxide, citric acid, and polyvinyl alcohol jointly inhibit bacterial colonization while preserving cell adhesion in dermal regeneration scaffolds.",Silver nanoparticles
+"Silver nitrate, chitosan, tannic acid, and temperature control co-regulate the formation of antimicrobial coatings for bone fixation hardware.",Silver nitrate
+"Silver nitrate, chitosan, tannic acid, and temperature control co-regulate the formation of antimicrobial coatings for bone fixation hardware.",chitosan
+"The controlled release of osteogenic agents is made possible through the integration of polyethylene glycol, genipin, gelatin, and growth factor carriers.",genipin
+"The controlled release of osteogenic agents is made possible through the integration of polyethylene glycol, genipin, gelatin, and growth factor carriers.",polyethylene glycol
+"The cryogel network suitable for bone defect fillers emerges from a combination of gelatin, hyaluronic acid, crosslinkers, and freeze-thaw cycling to yield a porous, cell-friendly architecture.",crosslinkers
+"The cryogel network suitable for bone defect fillers emerges from a combination of gelatin, hyaluronic acid, crosslinkers, and freeze-thaw cycling to yield a porous, cell-friendly architecture.",hyaluronic acid
+"The cryogel network suitable for bone defect fillers emerges from a combination of gelatin, hyaluronic acid, crosslinkers, and freeze-thaw cycling to yield a porous, cell-friendly architecture.",gelatin
+"The mechanical resilience of engineered bone grafts relies on the interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins.",hydrogen peroxide
+"The mechanical resilience of engineered bone grafts relies on the interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins.",iron(II) sulfate
+"The mechanical resilience of engineered bone grafts relies on the interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins.",pH buffering agents
+"The osteoinductive interface is activated only when hydroxyapatite, collagen, silver nitrate, and UV exposure are applied to the porous matrix surface.",collagen
+"The osteoinductive interface is activated only when hydroxyapatite, collagen, silver nitrate, and UV exposure are applied to the porous matrix surface.",hydroxyapatite
+"Without gelatin, hyaluronic acid, and freeze-thaw cycling, the resulting cryogel lacks the pore structure necessary for mesenchymal stem cell infiltration.",gelatin
+"Without gelatin, hyaluronic acid, and freeze-thaw cycling, the resulting cryogel lacks the pore structure necessary for mesenchymal stem cell infiltration.",hyaluronic acid
+"Zinc oxide and UV-curing, in the presence of citric acid and polyethylene glycol, lead to the creation of a responsive membrane for post-surgical wound sealing.",zinc oxide
+"Zinc oxide and UV-curing, in the presence of citric acid and polyethylene glycol, lead to the creation of a responsive membrane for post-surgical wound sealing.",UV-curing
+Zinc oxide and lactic acid work together to promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings.,lactic acid
+Zinc oxide and lactic acid work together to promote antibacterial activity and osteoinductivity in bioresorbable scaffold coatings.,Zinc oxide

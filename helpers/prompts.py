@@ -35,7 +35,7 @@ def extractConcepts(prompt: str, metadata={}, model="mistral-openorca:latest"):
         result = None
     return result
 
-
+### ORIGINAL GRAPH ### 
 def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
     if model == None:
         model = "mistral-openorca:latest"
@@ -77,7 +77,7 @@ def graphPrompt(input: str, metadata={}, model="mistral-openorca:latest"):
     return result
 
 
-#define pydantic scheme 
+### TRIPLES GRAPH ###
 class Edge(BaseModel):
     source: str
     target: str
@@ -153,9 +153,8 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         print("Exception:", e, "\n\n")
         return None
     
+"""
 
-
-### HYPERGRAPH ### 
 from pydantic import BaseModel
 from typing import List
 import json
@@ -165,29 +164,51 @@ import hypernetx as hnx
 # Define Pydantic schema for hypergraph
 class Event(BaseModel):
     id: str
-    entities: List[str]  # All co-dependent entities in this event
+    entities: List[str]
 
 class HypergraphJSON(BaseModel):
-    events: List[Event]  # Each event defines a hyperedge of entities
+    events: List[Event]
 
 def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
     if model is None:
         model = "mistral-openorca:latest"
 
     SYS_PROMPT = (
-        "You are a scientific knowledge extractor tasked with generating a hypergraph from a given context by identifying groups of co-occurring or co-dependent entities. "
-        "Your output will enable construction of a hypergraph, where each event acts as a hyperedge that connects multiple entities (nodes). "
-        "You are provided with a context chunk (delimited by triple backticks: ```). "
-        "Your task is to extract all meaningful scientific events and return a list of them. "
-        "Each event must be described using a field called 'id', which must capture the full relationship or interaction between the entities involved. "
-        "Use as much detail as is available in the original context to describe the event — this is not just a label, it is a meaningful, complete description of what the entities are doing together. "
-        "Each event must also include a field called 'entities', which is a list of all scientific terms that co-occur or co-function in that event, using the exact wording from the context. "
-        "Return a valid JSON object with a top-level key called 'events', which is a list of dictionaries. "
-        "Each dictionary must contain: 'id' (a detailed relationship string), and 'entities' (a list of strings). "
-        "Do not use angle brackets around field names. Ensure the JSON is syntactically correct and machine-readable."
+        "You are a scientific knowledge extractor who builds hypergraphs by identifying co-dependent or co-occurring scientific entities in a given context. "
+        "You are provided with a chunk of scientific text (delimited by triple backticks: ```). Your job is to extract events that represent meaningful scientific interactions or formulations.\n\n"
+
+        "Thought 1: As you read each sentence, identify groups of scientific entities that co-occur or co-function in a meaningful way.\n"
+        "\tEntities may include materials, chemicals, biological components, processing steps, or devices.\n\n"
+
+        "Thought 2: For each group, write a full sentence that describes what the entities are doing together. "
+        "This will be the 'id' field. Use wording from the source text whenever possible.\n\n"
+
+        "Thought 3: Output your results as a JSON list of objects. Each object should have:\n"
+        '\t- "id": a complete sentence describing the interaction\n'
+        '\t- "entities": a list of strings representing co-acting terms\n\n'
+
+        "Formatting rules:\n"
+        "\t- Output must be a valid JSON list (not wrapped in a dictionary)\n"
+        "\t- Do NOT include markdown formatting (no ``` or ```json)\n"
+        "\t- Do NOT add a comma after the last object in the list\n"
+        "\t- Do NOT use angle brackets around keys\n"
+        "\t- Always use double quotes for keys and string values\n"
+        "\t- Ensure all brackets [ ] and braces { } are properly closed and matched\n\n"
+
+        "Example format:\n"
+        '[\n'
+        '  {\n'
+        '    "id": "PDMS and carbon black combine to form a piezoresistive matrix.",\n'
+        '    "entities": ["PDMS", "carbon black"]\n'
+        '  },\n'
+        '  {\n'
+        '    "id": "Chitosan and genipin crosslink to form a hydrogel.",\n'
+        '    "entities": ["Chitosan", "genipin"]\n'
+        '  }\n'
+        ']'
     )
 
-    USER_PROMPT = f"context: ```{input}```\n\nExtract the hypergraph-style JSON with co-occurring entities grouped by event: "
+    USER_PROMPT = f"context: ```{input}```\n\nExtract a list of hypergraph-style events with co-acting entities:"
     print('Generating hypergraph events...')
     response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
 
@@ -195,7 +216,7 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
     print(response)
 
     try:
-        # Clean LLM response and remove markdown formatting (``` or ```json)
+        # Clean LLM response and remove markdown formatting
         cleaned_response = response.strip()
         if cleaned_response.startswith("```json"):
             cleaned_response = cleaned_response[len("```json"):].strip()
@@ -207,20 +228,125 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
         # Remove trailing commas before closing braces/brackets
         cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
 
-        # Parse raw JSON
-        raw_result = json.loads(cleaned_response)
+        # Parse flat list JSON
+        raw_events_list = json.loads(cleaned_response)
 
-        # Validate with Pydantic
-        validated_result = HypergraphJSON.model_validate(raw_result)
+        # Wrap in a dictionary for Pydantic validation
+        validated_result = HypergraphJSON(events=raw_events_list)
 
         # Build HyperNetX hypergraph
         edge_dict = {event.id: set(event.entities) for event in validated_result.events}
         H = hnx.Hypergraph(edge_dict)
 
-        print(f"Generated hypergraph with {len(H.nodes)} nodes and {len(H.edges)} hyperedges.")
+        print(f" Generated hypergraph with {len(H.nodes)} nodes and {len(H.edges)} hyperedges.")
         return H
 
     except Exception as e:
-        print("\n\nERROR ### Could not parse or validate hypergraph JSON. Here is the buggy response:\n", response)
-        print("Exception:", e, "\n\n")
+        print("\n\n ERROR: Could not parse or validate hypergraph JSON. Here is the buggy response:\n")
+        print(response)
+        print("\n Exception:\n", e)
         return None
+
+
+"""
+
+
+from pydantic import BaseModel
+from typing import List
+import json
+import re
+import hypernetx as hnx
+
+# Define Pydantic schema for hypergraph
+class Event(BaseModel):
+    id: str
+    entities: List[str]
+
+class HypergraphJSON(BaseModel):
+    events: List[Event]
+
+def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
+    if model is None:
+        model = "mistral-openorca:latest"
+
+    SYS_PROMPT = (
+        "You are a scientific knowledge extractor who builds hypergraphs by identifying co-dependent or co-occurring scientific entities in a given context. "
+        "You are provided with a chunk of scientific text (delimited by triple backticks: ```). Your job is to extract events that represent meaningful scientific interactions or formulations.\n\n"
+
+        "Thought 1: As you read each sentence, identify groups of scientific entities that co-occur or co-function in a meaningful way.\n"
+        "\tEntities may include materials, chemicals, biological components, processing steps, or devices.\n\n"
+
+        "Thought 2: For each group, write a full sentence that describes what the entities are doing together. "
+        "This will be the 'id' field. Use wording from the source text whenever possible.\n\n"
+
+        "Thought 3: Output your results as a JSON list of objects. Each object should have:\n"
+        '\t- "id": a complete sentence describing the interaction\n'
+        '\t- "entities": a list of strings representing co-acting terms\n\n'
+
+        "Formatting rules:\n"
+        "\t- Output must be a valid JSON list (not wrapped in a dictionary)\n"
+        "\t- Do NOT include markdown formatting (no ``` or ```json)\n"
+        "\t- Do NOT add a comma after the last object in the list\n"
+        "\t- Do NOT use angle brackets around keys\n"
+        "\t- Always use double quotes for keys and string values\n"
+        "\t- Ensure all brackets [ ] and braces { } are properly closed and matched\n\n"
+
+        "Example format:\n"
+        '[\n'
+        '  {\n'
+        '    "id": "PDMS and carbon black combine to form a piezoresistive matrix.",\n'
+        '    "entities": ["PDMS", "carbon black"]\n'
+        '  },\n'
+        '  {\n'
+        '    "id": "Chitosan and genipin crosslink to form a hydrogel.",\n'
+        '    "entities": ["Chitosan", "genipin"]\n'
+        '  }\n'
+        ']'
+    )
+
+    USER_PROMPT = f"context: ```{input}```\n\nExtract a list of hypergraph-style events with co-acting entities:"
+    print('Generating hypergraph events...')
+    response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
+
+    print("=== RAW LLM RESPONSE ===")
+    print(response)
+
+    try:
+        # Clean LLM response and remove markdown formatting
+        cleaned_response = response.strip()
+        if cleaned_response.startswith("```json"):
+            cleaned_response = cleaned_response[len("```json"):].strip()
+        elif cleaned_response.startswith("```"):
+            cleaned_response = cleaned_response[len("```"):].strip()
+        if cleaned_response.endswith("```"):
+            cleaned_response = cleaned_response[:-3].strip()
+
+        # Remove trailing commas before closing braces/brackets
+        cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
+
+        # Parse flat list JSON
+        raw_events_list = json.loads(cleaned_response)
+
+        # Validate against schema
+        validated_result = HypergraphJSON(events=raw_events_list)
+
+        # Create new edge labels: e1, e2, ...
+        edge_mapping = {f"e{i+1}": event.id for i, event in enumerate(validated_result.events)}
+
+        # Build edge dictionary using new labels and original entity sets
+        edge_dict = {
+            new_label: set(event.entities)
+            for new_label, event in zip(edge_mapping.keys(), validated_result.events)
+        }
+
+        # Build hypergraph
+        H_simple = hnx.Hypergraph(edge_dict)
+
+        print(f"Generated hypergraph with {len(H_simple.nodes)} nodes and {len(H_simple.edges)} relabeled hyperedges.")
+        return H_simple, edge_mapping
+
+    except Exception as e:
+        print("\n\n ERROR: Could not parse or validate hypergraph JSON. Here is the buggy response:\n")
+        print(response)
+        print("\n Exception:\n", e)
+        return None, None
