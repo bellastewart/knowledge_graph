@@ -1,40 +1,162 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
 <graph edgedefault="directed"><node id="PDMS"/>
-<node id="carbon_black"/>
-<node id="iron(II)_sulfate"/>
-<node id="hydrogen_peroxide"/>
-<node id="pH_buffering_agents"/>
-<node id="Zinc_oxide"/>
-<node id="lactic_acid"/>
-<node id="Polyethylene_oxide"/>
-<node id="lithium_salt"/>
-<node id="ceramic_nanoparticles"/>
+<node id="carbon black"/>
+<node id="iron(II) sulfate"/>
+<node id="hydrogen peroxide"/>
+<node id="pH buffering agents"/>
+<node id="matrix proteins"/>
+<node id="zinc oxide"/>
+<node id="lactic acid"/>
+<node id="polyethylene oxide"/>
+<node id="lithium salt"/>
+<node id="ceramic nanoparticles"/>
 <node id="plasticizers"/>
 <node id="chitosan"/>
 <node id="genipin"/>
-<edge source="PDMS" target="carbon_black">
-  <data key="d0">combines with</data>
+<node id="gelatin"/>
+<node id="hyaluronic acid"/>
+<node id="carbon nanotubes"/>
+<node id="ionic liquid"/>
+<node id="pressure-sensitive dye"/>
+<node id="laser excitation"/>
+<node id="polyvinyl alcohol"/>
+<node id="silver nitrate"/>
+<node id="beta-TCP"/>
+<node id="porogens"/>
+<node id="citric acid"/>
+<node id="eucalyptus oil"/>
+<node id="starch"/>
+<node id="silver nanoparticles"/>
+<node id="growth factor carriers"/>
+<node id="calcium phosphate"/>
+<node id="glycerol"/>
+<node id="polyethylene glycol"/>
+<node id="BMP-2"/>
+<node id="alginate"/>
+<node id="carbon nanotubes (2)"/>
+<node id="silk fibroin"/>
+<node id="tannic acid"/>
+<node id="polydopamine"/>
+<node id="iron oxide nanoparticles"/>
+<node id="polyethyleneimine"/>
+<node id="sodium alginate"/>
+<node id="calcium chloride"/>
+<node id="graphene oxide"/>
+<node id="flexible piezoresistive matrix"/>
+<node id="bioresorbable scaffold coatings"/>
+<node id="solid polymer electrolyte"/>
+<node id="biosensing applications integrated into smart bone implants"/>
+<node id="freeze-thaw cycling"/>
+<node id="cell-friendly architecture"/>
+<node id="hydroxyapatite"/>
+<node id="collagen"/>
+<node id="polycaprolactone"/>
+<node id="carbon nanotubes (3)"/>
+<node id="UV-curing"/>
+<edge source="PDMS" target="carbon black">
+  <data key="d0">combine</data>
 </edge>
-<edge source="iron(II)_sulfate" target="hydrogen_peroxide">
-  <data key="d0">interplays with during oxidative crosslinking</data>
+<edge source="PDMS" target="flexible piezoresistive matrix">
+  <data key="d0">create</data>
 </edge>
-<edge source="iron(II)_sulfate" target="pH_buffering_agents">
-  <data key="d0">interplays with during oxidative crosslinking</data>
+<edge source="PDMS" target="carbon nanotubes">
+  <data key="d0">combine</data>
 </edge>
-<edge source="Zinc_oxide" target="lactic_acid">
-  <data key="d0">works together to promote antibacterial activity and osteoinductivity</data>
+<edge source="PDMS" target="ionic liquid">
+  <data key="d0">combine</data>
 </edge>
-<edge source="Polyethylene_oxide" target="lithium_salt">
-  <data key="d0">together produce a solid polymer electrolyte useful for biosensing applications</data>
+<edge source="PDMS" target="pressure-sensitive dye">
+  <data key="d0">combine</data>
 </edge>
-<edge source="Polyethylene_oxide" target="ceramic_nanoparticles">
-  <data key="d0">together produce a solid polymer electrolyte useful for biosensing applications</data>
+<edge source="PDMS" target="laser excitation">
+  <data key="d0">together enable</data>
 </edge>
-<edge source="Polyethylene_oxide" target="plasticizers">
-  <data key="d0">together produce a solid polymer electrolyte useful for biosensing applications</data>
+<edge source="PDMS" target="carbon nanotubes (2)">
+  <data key="d0">construct</data>
+</edge>
+<edge source="PDMS" target="carbon nanotubes (3)">
+  <data key="d0">construct</data>
+</edge>
+<edge source="PDMS" target="graphene oxide">
+  <data key="d0">used together with low-intensity pulsed ultrasound</data>
+</edge>
+<edge source="iron(II) sulfate" target="hydrogen peroxide">
+  <data key="d0">during oxidative crosslinking</data>
+</edge>
+<edge source="iron(II) sulfate" target="pH buffering agents">
+  <data key="d0">during oxidative crosslinking</data>
+</edge>
+<edge source="hydrogen peroxide" target="matrix proteins">
+  <data key="d0">rely on the interplay with</data>
+</edge>
+<edge source="zinc oxide" target="lactic acid">
+  <data key="d0">work together to promote</data>
+</edge>
+<edge source="zinc oxide" target="bioresorbable scaffold coatings">
+  <data key="d0">promote antibacterial activity and osteoinductivity in</data>
+</edge>
+<edge source="zinc oxide" target="UV-curing">
+  <data key="d0">lead to the creation of a responsive membrane for post-surgical wound sealing</data>
+</edge>
+<edge source="polyethylene oxide" target="lithium salt">
+  <data key="d0">together produce</data>
+</edge>
+<edge source="polyethylene oxide" target="solid polymer electrolyte">
+  <data key="d0">together produce</data>
+</edge>
+<edge source="lithium salt" target="biosensing applications integrated into smart bone implants">
+  <data key="d0">useful for</data>
+</edge>
+<edge source="ceramic nanoparticles" target="plasticizers">
+  <data key="d0">together produce</data>
 </edge>
 <edge source="chitosan" target="genipin">
-  <data key="d0">crosslinks to form a biocompatible, elastic hydrogel matrix</data>
+  <data key="d0">crosslink to form</data>
+</edge>
+<edge source="chitosan" target="gelatin">
+  <data key="d0">form synergistically to form an injectable</data>
+</edge>
+<edge source="gelatin" target="hyaluronic acid">
+  <data key="d0">together yield</data>
+</edge>
+<edge source="gelatin" target="freeze-thaw cycling">
+  <data key="d0">yield</data>
+</edge>
+<edge source="gelatin" target="cell-friendly architecture">
+  <data key="d0">resulting cryogel lacks the pore structure necessary for</data>
+</edge>
+<edge source="carbon nanotubes" target="ionic liquid">
+  <data key="d0">together enable</data>
+</edge>
+<edge source="carbon nanotubes" target="beta-TCP">
+  <data key="d0">co-process with</data>
+</edge>
+<edge source="polyvinyl alcohol" target="starch">
+  <data key="d0">blend under pressure to attain the mechanical strength required for</data>
+</edge>
+<edge source="silver nitrate" target="chitosan">
+  <data key="d0">co-regulate the formation of antimicrobial coatings for bone fixation hardware</data>
+</edge>
+<edge source="silver nanoparticles" target="chitosan">
+  <data key="d0">function synergistically to form an antimicrobial matrix for bone defect healing</data>
+</edge>
+<edge source="polyethylene glycol" target="genipin">
+  <data key="d0">make the controlled release of osteogenic agents possible through the integration of</data>
+</edge>
+<edge source="carbon nanotubes (2)" target="silk fibroin">
+  <data key="d0">together form</data>
+</edge>
+<edge source="polydopamine" target="iron oxide nanoparticles">
+  <data key="d0">collectively create a magnetically targetable bioadhesive suitable for minimally invasive scaffold placement</data>
+</edge>
+<edge source="sodium alginate" target="calcium chloride">
+  <data key="d0">generate a hybrid scaffold with both structural rigidity and cell-supportive hydration</data>
+</edge>
+<edge source="hydroxyapatite" target="collagen">
+  <data key="d0">augment by BMP-2, alginate, and magnetic stirring</data>
+</edge>
+<edge source="polycaprolactone" target="beta-TCP">
+  <data key="d0">co-process with</data>
 </edge>
 </graph></graphml>

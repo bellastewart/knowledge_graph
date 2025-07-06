@@ -8,10 +8,14 @@ import json
 import re
 import networkx as nx
 import hypernetx as hnx
+import instructor
+import openai
 
 
 from pydantic import BaseModel
 from typing import List
+from instructor import patch
+from openai import OpenAI
 
 
 
@@ -97,24 +101,20 @@ def graphjson_to_nx(graph_json: GraphJSON) -> nx.DiGraph:
     for edge in graph_json.edges:
         G.add_edge(edge.source, edge.target, relation=edge.relation)
     return G
-
+"""
 def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
     if model is None:
         model = "mistral-openorca:latest"
 
     SYS_PROMPT = (
-    "You are a scientific knowledge extractor tasked with generating a hypergraph from a given context, identifying groups of co-dependent entities that participate together in scientific events. "
-    "Your output will enable construction of a hypergraph, where each event acts as a hyperedge connecting multiple entities (nodes). "
-    "You are provided with a context chunk (delimited by triple backticks: ```). "
-    "Your goal is to detect scientific events and extract the set of entities that are functionally or physically linked within each event. "
-    "Each event must be described with a short but descriptive phrase in a field called `id`. "
-    "Each event must also list all co-occurring entities in a field called `entities`, using precise technical terms or abbreviations exactly as they appear in the text. "
-    "Return a valid JSON object with a single top-level field: `events`. "
-    "Each item in `events` must be a dictionary with two fields: "
-    "`id` (the event description), and `entities` (a list of co-dependent entity strings). "
-    "Do not include angle brackets around field names. "
-    "Ensure the JSON is syntactically correct and fully compatible with standard JSON parsers."
-    )   
+        'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
+        'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods.'
+        'You always report a technical term or abbreviation and keep it as it is.'
+        '<relation> in an edge must truly reveal important information that can provide scientific insight from the <source> to the <target>'
+        'Return a JSON with two fields: <nodes> and <edges>.\n'
+        'Each node must have <id>.\n'
+        'Each edge must have <source>, <target>, and <relation>.'
+    )
 
     USER_PROMPT = f"context: ```{input}```\n\nExtract the knowledge graph in structured JSON: "
     print('Generating triples...')
@@ -153,6 +153,68 @@ def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
         print("Exception:", e, "\n\n")
         return None
     
+"""
+def docsgraphPrompt(input: str, model="mistral-openorca:latest"):
+    if model is None:
+        model = "mistral-openorca:latest"
+
+    SYS_PROMPT = (
+        'You are a network ontology graph maker who extracts terms and their relations from a given context, using category theory. '
+        'You are provided with a context chunk (delimited by ```) Your task is to extract the ontology of terms mentioned in the given context, representing the key concepts as per the context with well-defined and widely used names of materials, systems, methods. '
+        'You always report a technical term or abbreviation and keep it as it is. '
+        '<relation> in an edge must truly reveal important relationship that can provide scientific insight between the <source> to the <target>.'
+        'Return only the fields explicitly requested. Do not include any additional fields'
+        'Return a JSON with two fields: <nodes> and <edges>.\n'
+        'Each node must have <id>.\n'
+        'Each edge must have <source>, <target>, and <relation>. \n'
+    )
+
+    USER_PROMPT = f"context: ```{input}```\n\nExtract the knowledge graph in structured JSON: "
+    print('Generating triples...')
+    response, _ = client.generate(model_name=model, system=SYS_PROMPT, prompt=USER_PROMPT)
+
+    print("=== RAW LLM RESPONSE ===")
+    print(response)
+
+    try:
+        cleaned_response = response.strip().strip("```")
+        cleaned_response = re.sub(r",\s*([}\]])", r"\1", cleaned_response)
+
+        raw_result = json.loads(cleaned_response)
+
+        # Convert nodes dict to list if needed
+        if isinstance(raw_result.get("nodes"), dict):
+            raw_result["nodes"] = [{"id": k} for k in raw_result["nodes"].keys()]
+
+        # Convert edges dict to list if needed
+        if isinstance(raw_result.get("edges"), dict):
+            raw_result["edges"] = list(raw_result["edges"].values())
+
+        # Flatten nested relation field if needed
+        for edge in raw_result.get("edges", []):
+            relation = edge.get("relation")
+            if isinstance(relation, dict):
+                # Join all parts of relation into one flat string
+                relation_str = "; ".join(f"{k}: {v}" for k, v in relation.items())
+                edge["relation"] = relation_str  # flatten it
+
+        # Validate using Pydantic
+        validated_result = GraphJSON.model_validate(raw_result)
+
+        # Create NetworkX graph
+        G = graphjson_to_nx(validated_result)
+
+        print(f"Generated graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges.")
+        return G
+
+    except Exception as e:
+        print("\n\nERROR ### Could not parse or validate graph JSON. Here is the buggy response:\n", response)
+        print("Exception:", e, "\n\n")
+        return None
+
+"""
+THE COMMENTED OUT FOLLOWING IS USED IN THE CASE OF NO LABELING OF THE HYPEREDGES (E1 E2 E3 etc. for simplification purposes )
+"""
 """
 
 from pydantic import BaseModel
@@ -249,6 +311,9 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
 
 
 """
+
+'''
+OLD CODE WITHOUT PYDANTIC. ITS WORKING THOUGH. ALSO SIMPLIFIES THE LABELING TO SIMPLE LABELS 
 
 
 from pydantic import BaseModel
@@ -350,3 +415,70 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
         print(response)
         print("\n Exception:\n", e)
         return None, None
+'''
+
+
+# Define schema
+class Event(BaseModel):
+    id: str
+    entities: List[str]
+
+class HypergraphJSON(BaseModel):
+    events: List[Event]
+
+# Set up client
+client = instructor.from_openai(
+    OpenAI(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",  # required, but unused
+    ),
+    mode=instructor.Mode.JSON,
+)
+
+def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
+    print('Generating hypergraph events...')
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a scientific knowledge extractor who builds hypergraphs by identifying co-dependent or "
+                    "co-occurring scientific entities. You are provided with a chunk of scientific context. "
+                    "Your task is to extract the ontology of terms mentioned in that context, representing the key "
+                    "concepts with well-defined and widely used names of materials, systems, and methods. "
+                    "You always report technical terms and abbreviations exactly as they appear. "
+                    "Return a JSON with a single field: 'events'. Each event must have:\n"
+                    "- 'id': sentence describing the interaction\n"
+                    "- 'entities': list of involved terms"
+                )
+            },
+            {
+                "role": "user",
+                "content": f"Context: ```{input}```\nExtract the hypergraph knowledge graph in structured JSON format."
+            }
+        ],
+        response_model=HypergraphJSON
+    )
+
+    # Use already validated result
+    validated_result = response
+    print("=== Parsed LLM Response ===")
+    print(validated_result)
+
+    edge_mapping = {f"e{i+1}": event.id for i, event in enumerate(validated_result.events)}
+    edge_dict = {
+        edge_label: set(event.entities)
+        for edge_label, event in zip(edge_mapping.keys(), validated_result.events)
+    }
+
+    H_simple = hnx.Hypergraph(edge_dict)
+
+    print(f"Generated hypergraph with {len(H_simple.nodes)} nodes and {len(H_simple.edges)} relabeled hyperedges.")
+    return H_simple, edge_mapping
+
+
+
+
+
