@@ -1,4 +1,9 @@
+Hydrangea is a flower. 
+
+A flower is in the hills of Ireland. 
+
 PDMS and carbon black combine to create a flexible, piezoresistive matrix ideal for embedding strain sensors in load-bearing tissue constructs.
 
 The mechanical resilience of engineered bone grafts relies on the interplay between iron(II) sulfate, hydrogen peroxide, and pH buffering agents during oxidative crosslinking of matrix proteins.
 
+The composite scaffold was constructed from cell-adherent, base-etched, electrospun poly(epsilon-caprolactone-co-D,L-lactide) (PCLDLLA) fibers embedded in a noncell-adherent photocrosslinked N-methacrylated glycol chitosan (MGC) hydrogel seeded with primary ligament fibroblasts. 

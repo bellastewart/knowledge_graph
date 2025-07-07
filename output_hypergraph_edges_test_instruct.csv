@@ -1,10 +1,22 @@
 event,entity
-e1,matrix
-e1,carbon black
-e1,PDMS
-e2,engineered bone grafts
-e2,oxidative crosslinking
-e2,iron(II) sulfate
-e2,matrix proteins
-e2,pH buffering agents
-e2,hydrogen peroxide
+e1,Hydrangea
+e1,flower
+e2,Hydrangea
+e2,location
+e3,location
+e3,hills of Ireland
+e4,PDMS
+e4,carbon black
+e4,"flexible, piezoresistive matrix"
+e5,load-bearing tissue constructs
+e5,"flexible, piezoresistive matrix"
+e6,hydrogen peroxide
+e6,pH buffering agents
+e6,iron(II) sulfate
+e6,mechanical resilience of engineered bone grafts
+e7,composite scaffold
+e7,"cell-adherent, base-etched, electrospun poly(epsilon-caprolactone-co-D,L-lactide) (PCLDLLA) fibers"
+e8,composite scaffold
+e8,a noncell-adherent photocrosslinked N-methacrylated glycol chitosan (MGC) hydrogel
+e9,composite scaffold
+e9,primary ligament fibroblasts

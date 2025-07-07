@@ -417,6 +417,7 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
         return None, None
 '''
 
+'''
 
 # Define schema
 class Event(BaseModel):
@@ -478,7 +479,207 @@ def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
     print(f"Generated hypergraph with {len(H_simple.nodes)} nodes and {len(H_simple.edges)} relabeled hyperedges.")
     return H_simple, edge_mapping
 
+'''
+'''
+
+# Define schema
+class Event(BaseModel):
+    source: List[str]
+    target: str
+    relation: str 
+
+class HypergraphJSON(BaseModel):
+    events: List[Event]
+
+# Set up client
+client = instructor.from_openai(
+    OpenAI(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",  # required, but unused
+    ),
+    mode=instructor.Mode.JSON,
+)
+
+def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
+    print('Generating hypergraph events...')
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+                {
+            "role": "system",
+            "content": (
+                "You are a network ontology graph maker who extracts terms and their relations from a given context, using principles from category theory.\n\n"
+
+                "You are provided with a context chunk (delimited by triple backticks: ```). Your task is to extract an ontology of terms mentioned in the given context, representing key scientific concepts, systems, materials, and methods using well-defined, technical, and widely accepted terminology.\n\n"
+
+                "Guidelines:\n"
+                "- Always report technical terms and abbreviations exactly as they appear in the text.\n"
+                "- Use <relation> values that reveal scientifically meaningful relationships between entities.\n"
+                "- Prefer category-theoretic relation names such as 'is', 'has', 'acts on', 'used for', 'composed of', etc.\n"
+                "- If 3 or more co-dependent entities are mentioned in relation to a target, treat them as an n-ary source group.\n"
+                "- If only 2 entities are involved, extract a binary relation.\n"
+                "- Do not include any additional fields beyond those specified.\n\n"
+
+                "Return a JSON object with a single field: 'events'. Each event must contain:\n"
+                "- 'source': a single entity (string) or a list of multiple entities involved in the relation\n"
+                "- 'target': the target entity or concept\n"
+                "- 'relation': a concise phrase describing the relation from source to target\n\n"
+
+                "Examples:\n\n"
+
+                "Binary relation:\n"
+                "{\n"
+                "  \"source\": \"hydrangea\",\n"
+                "  \"target\": \"flower\",\n"
+                "  \"relation\": \"is a type of\"\n"
+                "}\n\n"
+
+                "N-ary relation:\n"
+                "{\n"
+                "  \"source\": [\"Sally\", \"Bob\", \"Julia\"],\n"
+                "  \"target\": \"paper 1\",\n"
+                "  \"relation\": \"are equal co-authors of\"\n"
+                "}\n\n"
+            )
+        }
+            ,
+            {
+                "role": "user",
+                "content": f"Context: ```{input}```\nExtract the hypergraph knowledge graph in structured JSON format."
+            }
+        ],
+        response_model=HypergraphJSON
+    )
+
+# Use already validated result
+    validated_result = response
+    print("=== Parsed LLM Response ===")
+    print(validated_result)
+
+    # Use the `relation` field as the ID label for each event
+    edge_mapping = {f"e{i+1}": event.relation for i, event in enumerate(validated_result.events)}
+
+    # Hyperedges: group source + target into the full set of entities for the hyperedge
+    edge_dict = {
+        edge_label: set(event.source if isinstance(event.source, list) else [event.source]) | {event.target}
+        for edge_label, event in zip(edge_mapping.keys(), validated_result.events)
+    }
+
+    H_simple = hnx.Hypergraph(edge_dict)
+
+    print(f"Generated hypergraph with {len(H_simple.nodes)} nodes and {len(H_simple.edges)} relabeled hyperedges.")
+    return H_simple, edge_mapping
+'''
 
 
 
+# Define schema
+class Event(BaseModel):
+    source: List[str]
+    target: str
+    relation: str 
 
+class HypergraphJSON(BaseModel):
+    events: List[Event]
+
+# Set up client
+client = instructor.from_openai(
+    OpenAI(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",  # required, but unused
+    ),
+    mode=instructor.Mode.JSON,
+)
+
+def docsHypergraphPrompt(input: str, model="mistral-openorca:latest"):
+    print('Generating hypergraph events...')
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+                {
+            "role": "system",
+           "content": (
+                    "You are a network ontology graph maker who extracts terms and their relations from a given context, using principles from category theory.\n\n"
+
+                    "You are provided with a context chunk (delimited by triple backticks: ```). Your task is to extract an ontology of terms mentioned in the context, representing key scientific concepts, systems, materials, and methods using well-defined, technical, and widely accepted terminology.\n\n"
+
+                    "Proceed step by step:\n"
+                    "Thought 1: Traverse the text sentence by sentence. Identify key scientific terms, such as materials, methods, entities, systems, conditions, or acronyms. \n"
+                    "    - Focus on extracting terms that are atomistic and domain-relevant.\n"
+                    "    - Group modifiers (e.g., 'collagen scaffold') as one term if they form a recognized concept.\n\n"
+
+                    "Thought 2: Determine which terms are related to each other based on their co-occurrence in a sentence or paragraph.\n"
+                    "    - A term may relate to multiple other terms.\n"
+                    "    - Look for structural, functional, or procedural relationships.\n\n"
+
+                    "Thought 3: For each related group of terms, infer the scientific relationship between them.\n"
+                    "    - Use category-theoretic relation names when possible, such as: 'is', 'has', 'acts on', 'used for', 'composed of', 'leads to'.\n"
+                    "    - If 3 or more co-dependent entities relate to a shared target, use an n-ary relation with the source as a list.\n"
+                    "    - If only 2 entities are involved, use a binary relation.\n\n"
+
+                    "Output Specification:\n"
+                    "Return a JSON object with a single field: 'events'. Each event must contain:\n"
+                    "- 'source': a string (for binary) or a list of entities (for n-ary)\n"
+                    "- 'target': the main concept or object being acted upon or described\n"
+                    "- 'relation': a concise, meaningful phrase describing the relation between source and target\n\n"
+
+                    "Important:\n"
+                    "- Always preserve the original wording for technical terms.\n"
+                    "- Do not invent entities or relations that are not implied in the text.\n"
+                    "- Do not include any additional fields beyond 'source', 'target', and 'relation'.\n\n"
+
+                    "Examples:\n\n"
+
+                    "Binary relation:\n"
+                    "{\n"
+                    "  \"source\": \"hydrangea\",\n"
+                    "  \"target\": \"flower\",\n"
+                    "  \"relation\": \"is a type of\"\n"
+                    "}\n\n"
+
+                    "N-ary relation:\n"
+                    "{\n"
+                    "  \"source\": [\"Sally\", \"Bob\", \"Julia\"],\n"
+                    "  \"target\": \"paper 1\",\n"
+                    "  \"relation\": \"are equal co-authors of\"\n"
+                    "}\n\n"
+
+                    "Return a JSON object with this structure:\n"
+                    "{\n"
+                    "  \"events\": [\n"
+                    "     {\"source\": ..., \"target\": ..., \"relation\": ...},\n"
+                    "     {...},\n"
+                    "     ...\n"
+                    "  ]\n"
+                    "}"
+                    )
+        }
+            ,
+            {
+                "role": "user",
+                "content": f"Context: ```{input}```\nExtract the hypergraph knowledge graph in structured JSON format."
+            }
+        ],
+        response_model=HypergraphJSON
+    )
+
+# Use already validated result
+    validated_result = response
+    print("=== Parsed LLM Response ===")
+    print(validated_result)
+
+    # Use the `relation` field as the ID label for each event
+    edge_mapping = {f"e{i+1}": event.relation for i, event in enumerate(validated_result.events)}
+
+    # Hyperedges: group source + target into the full set of entities for the hyperedge
+    edge_dict = {
+        edge_label: set(event.source if isinstance(event.source, list) else [event.source]) | {event.target}
+        for edge_label, event in zip(edge_mapping.keys(), validated_result.events)
+    }
+
+    H_simple = hnx.Hypergraph(edge_dict)
+
+    print(f"Generated hypergraph with {len(H_simple.nodes)} nodes and {len(H_simple.edges)} relabeled hyperedges.")
+    return H_simple, edge_mapping
